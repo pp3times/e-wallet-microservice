@@ -1,5 +1,8 @@
 import { createTheme } from "@mui/material/styles";
 export const GolbalTheme = createTheme({
+  typography: {
+    fontFamily: "LineSeed",
+  },
   palette: {
     primary: {
       main: "#01B469",
