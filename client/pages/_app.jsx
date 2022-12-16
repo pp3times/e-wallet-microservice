@@ -1,5 +1,14 @@
-import '../styles/globals.css'
+import { ThemeProvider, CssBaseline } from "@mui/material";
+import { GolbalTheme } from "../styles/theme/theme";
+import "../styles/globals.css";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function Home({ Component, pageProps }) {
+  return (
+    <ThemeProvider theme={GolbalTheme}>
+      <CssBaseline /> 
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
+
+export default Home;
