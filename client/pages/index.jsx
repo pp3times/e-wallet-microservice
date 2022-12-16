@@ -1,18 +1,19 @@
-import * as React from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import RestoreIcon from "@mui/icons-material/Restore";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { Layout } from "../components";
 
 export default function SimpleBottomNavigation() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
 
   return (
-    <>
-      fasdfsdsdfasdfหกหฟกดฟห
-      <Box sx={{ width: 500 }}>
+    <Layout title={"หน้าแรก"}>
+      <section className="border border-red-400 w-full">d</section>
+      <Box className="w-full border">
         <BottomNavigation
           showLabels
           value={value}
@@ -25,6 +26,6 @@ export default function SimpleBottomNavigation() {
           <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
         </BottomNavigation>
       </Box>
-    </>
+    </Layout>
   );
 }

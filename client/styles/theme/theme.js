@@ -3,9 +3,12 @@ export const GolbalTheme = createTheme({
   typography: {
     fontFamily: "LineSeed",
   },
+  status: {
+    danger: "#EB455F",
+  },
   palette: {
     primary: {
-      main: "#01B469",
+      main: "#2B3467",
       contrastText: "#fff",
     },
     neutral: {
