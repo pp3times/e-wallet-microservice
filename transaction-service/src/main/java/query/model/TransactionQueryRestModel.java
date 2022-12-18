@@ -1,4 +1,4 @@
-package query.rest;
+package query.model;
 
 public class TransactionQueryRestModel {
 }

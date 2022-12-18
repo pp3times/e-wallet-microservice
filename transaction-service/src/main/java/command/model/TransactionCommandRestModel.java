@@ -1,4 +1,4 @@
-package command.rest;
+package command.model;
 
 public class TransactionCommandRestModel {
 }
