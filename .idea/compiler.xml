@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-service" />
         <module name="transaction-service" />
+        <module name="account-service" />
         <module name="gateway-service" />
       </profile>
     </annotationProcessing>

@@ -24,10 +24,10 @@ public class DepositCommandController {
     @PostMapping
     public String createDepositAction(@RequestBody DepositRestModel model){
         DepositCommandBuilder command = DepositCommandBuilder.builder()
-                .depositId(UUID.randomUUID().toString())
+                .transactionId(UUID.randomUUID().toString())
                 .accountId(model.getAccountId())
-                .accountNumber(model.getAccountNumber())
-                .money(model.getMoney())
+                .walletAddress(model.getWalletAddress())
+                .amount(model.getAmount())
                 .build();
         String result;
         try {
