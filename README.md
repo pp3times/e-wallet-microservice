@@ -6,7 +6,7 @@
 
    * [`micro-gateway-service`] **Spring Cloud Gateway** aims to provide a simple, yet effective way to route to APIs and provide cross cutting concerns to them such as: security, monitoring/metrics, and resiliency.
 
-   * [`micro-eureka-service`] This is the Eureka Server which holds the information about all client-service applications. Eureka server knows all the client applications running on each port and IP address. It is also known as Discovery Server. 
+   * [`micro-eureka-service`] This is the Eureka Server which holds the information about all server-service applications. Eureka server knows all the server applications running on each port and IP address. It is also known as Discovery Server. 
 
    * [`micro-auth-service`] Is an **Authorisation server** which provides REST service for creating user credentials and access_token created with `Spring Boot, Spring Cloud JWT Oauth2, Spring Data JPA, MySQL
 
