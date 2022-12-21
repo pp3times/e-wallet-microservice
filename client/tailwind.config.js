@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         screen: "white",
         primary: "#20B367",
+        error: "#E44A4A",
       },
     },
   },
