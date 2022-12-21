@@ -1,6 +1,6 @@
 import { Modal, Box, Typography } from "@mui/material";
 import { WalletOutlined, ImportExportOutlined } from "@mui/icons-material";
-const AcceptModal = ({ open, setOpen, amount }) => {
+const AcceptModal = ({ open, setOpen, amount, goal }) => {
   const handleClose = () => {
     setOpen(false);
   };
@@ -18,7 +18,7 @@ const AcceptModal = ({ open, setOpen, amount }) => {
           <div className="flex flex-col items-center justify-between w-full text-white py-10">
             <p className="font-bold text-xl">จำนวนเงิน</p>
             <p className="text-4xl font-bold py-7">{amount} บาท</p>
-            <p className="font-bold text-sm">บัญชีปลายทาง 123-456-7890</p>
+            <p className="font-bold text-sm">บัญชีปลายทาง {goal}</p>
             <p className="font-bold text-sm mt-3">โดยผ่านบัตรเคดิต</p>
           </div>
           <svg className="absolute right-0" width="124" height="142" viewBox="0 0 124 142" fill="none" xmlns="http://www.w3.org/2000/svg">

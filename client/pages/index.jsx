@@ -1,11 +1,17 @@
 import { useState } from "react";
 import { Layout, Nav, BottomNavigate, CardWallet } from "../components";
 import { PaidOutlined, WalletOutlined, QueryStatsOutlined } from "@mui/icons-material";
+import Link from "next/link";
 
 export default function SimpleBottomNavigation() {
-  const [value, setValue] = useState(0);
-  const [status, setStatus] = useState(false);
-  const [transaction, setTransaction] = useState([{ status: false }, { status: true }, { status: true }, { status: true }, { status: true }]);
+  const [transaction, setTransaction] = useState([
+    { status: true },
+    { status: true },
+    { status: true },
+    { status: true },
+    { status: true },
+    { status: true },
+  ]);
 
   return (
     <Layout title={"หน้าแรก"}>
@@ -15,10 +21,10 @@ export default function SimpleBottomNavigation() {
         <div className="w-full flex flex-col justify-center px-3 py-5 mt-5">
           <hr className="border-zinc-300" />
           <p className="w-full text-left mt-5 font-bold text-sm">การทำรายการล่าสุด</p>
-          <div className="flex items-center gap-x-5 pt-4 w-full overflow-x-scroll">
+          <div className="w-full flex pt-4 gap-x-5 overflow-x-auto">
             {transaction.map((items, index) => {
               return (
-                <div key={index} className="flex flex-col items-center w-96">
+                <div key={index} className="flex flex-col items-center flex-none">
                   <div
                     className={
                       "border-2 rounded-full w-16 h-16  flex items-center justify-center font-extrabold  text-xl " +
@@ -37,18 +43,18 @@ export default function SimpleBottomNavigation() {
         <div className="flex flex-col w-full rounded-t-2xl  border-t border-zinc-300 mt-2 px-3 py-5">
           <p className="font-semibold text-sm">เมนูทำรายการ</p>
           <div className="flex items-center justify-start gap-x-5 mt-5">
-            <button className="bg-primary/20 rounded-md h-20 w-20 flex flex-col items-center justify-center text-primary shadow-xl">
+            <Link href="/exchange" className="bg-primary/20 rounded-md h-20 w-20 flex flex-col items-center justify-center text-primary shadow-xl">
               <PaidOutlined className="text-3xl font-bold" />
-              <p>ถอนเงิน</p>
-            </button>
-            <button className="bg-primary/20 rounded-md h-20 w-20 flex flex-col items-center justify-center text-primary shadow-xl">
+              <p>โอนเงิน</p>
+            </Link>
+            <Link href="/topup" className="bg-primary/20 rounded-md h-20 w-20 flex flex-col items-center justify-center text-primary shadow-xl">
               <WalletOutlined className="text-3xl font-bold" />
               <p>เติมเงิน</p>
-            </button>
-            <button className="bg-primary/20 rounded-md h-20 w-20 flex flex-col items-center justify-center text-primary shadow-xl">
+            </Link>
+            <Link href="" className="bg-primary/20 rounded-md h-20 w-20 flex flex-col items-center justify-center text-primary shadow-xl">
               <QueryStatsOutlined className="text-3xl font-bold" />
               <p>ภาพรวม</p>
-            </button>
+            </Link>
           </div>
         </div>
       </section>

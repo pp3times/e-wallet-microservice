@@ -7,7 +7,6 @@ import { useForm, Controller } from "react-hook-form";
 
 const TopupInput = () => {
   const [open, setOpen] = useState(false);
-  const [goal, setGoal] = useState("0252788239")
 
   const {
     register,
@@ -32,7 +31,7 @@ const TopupInput = () => {
 
   return (
     <Layout title="กรอกข้อมูล">
-      <AcceptModal open={open} setOpen={setOpen} amount={watch("amount")} goal={goal}/>
+      <AcceptModal open={open} setOpen={setOpen} amount={watch("amount")} goal={watch("goal")} />
       <div className="bg-primary h-screen w-full pt-5 text-white flex flex-col">
         <div className="flex items-center w-full px-5">
           <Link href="/">
@@ -52,7 +51,16 @@ const TopupInput = () => {
           className="bg-white rounded-t-xl flex-grow py-10 h-full w-full mt-10 px-5 pt-4 text-black flex flex-col justify-between"
         >
           <div className="">
-            <p className="font-bold text-sm">กรอกจำนวนเงิน</p>
+            <p className="font-bold text-sm">กรอกเลขบัญชีปลายทาง</p>
+            <TextField
+              color={errors.goal ? "error" : "primary"}
+              className="w-full mt-5"
+              label="กรอกเลขบัญชีปลายทาง"
+              variant="outlined"
+              {...register("goal", { required: "กรอกเลขบัญชีปลายทาง" })}
+            />
+            <Error name="goal" />
+            <p className="font-bold text-sm mt-10">กรอกจำนวนเงิน</p>
             <TextField
               color={errors.amount ? "error" : "primary"}
               className="w-full mt-5"

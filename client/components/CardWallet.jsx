@@ -1,7 +1,8 @@
 import { WalletOutlined, ImportExportOutlined } from "@mui/icons-material";
+import Link from "next/link";
 const CardWallet = () => {
   return (
-    <div className="relative rounded-lg shadow-xl flex flex-col items-center px-3">
+    <div className="relative rounded-lg shadow-xl flex flex-col items-center mx-3">
       <div className=" bg-gradient-to-br from-primary to-[#024422] px-5 py-3 rounded-md w-full flex items-center">
         <div className="flex flex-col items-start justify-between w-full gap-y-5  text-white">
           <p className="font-bold text-xs">จำนวนเงินคงเหลือ</p>
@@ -14,14 +15,14 @@ const CardWallet = () => {
         </svg>
       </div>
       <div className="flex items-center justify-between w-full p-5 gap-x-10">
-        <div className="flex items-center justify-center bg-primary/20 text-primary gap-x-2 py-2 w-2/4 rounded-md">
+        <Link href="/exchange" className="flex items-center justify-center bg-primary/20 text-primary gap-x-2 py-2 w-2/4 rounded-md">
           <WalletOutlined />
           <p className="text-black font-bold">เติมเงิน</p>
-        </div>
-        <div className="flex items-center justify-center bg-primary/20 text-primary gap-x-2 py-2 w-2/4 rounded-md">
+        </Link>
+        <Link href="/topup" className="flex items-center justify-center bg-primary/20 text-primary gap-x-2 py-2 w-2/4 rounded-md">
           <ImportExportOutlined />
           <p className="text-black font-bold">โอนเงิน</p>
-        </div>
+        </Link>
       </div>
     </div>
   );

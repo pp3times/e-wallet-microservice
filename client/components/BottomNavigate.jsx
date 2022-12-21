@@ -27,7 +27,7 @@ const BottomNavigate = () => {
           <GridViewOutlined className="text-3xl" />
           <p className="text-sm">บริการ</p>
         </Link>
-        <Link href="" className="flex flex-col items-center">
+        <Link href="/profile" className="flex flex-col items-center">
           <Person2Outlined className="text-3xl" />
           <p className="text-sm">โปรไฟล์</p>
         </Link>

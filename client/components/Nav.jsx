@@ -2,7 +2,7 @@ import * as React from "react";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Tooltip from "@mui/material/Tooltip";
-import { Notifications, Logout, Person } from "@mui/icons-material";
+import { NotificationsOutlined, Logout, Person } from "@mui/icons-material";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { deleteCookie, getCookie } from "cookies-next";
@@ -34,7 +34,7 @@ function ResponsiveAppBar() {
         <Tooltip title="Open settings">
           <IconButton onClick={handleLogout} sx={{ p: 0 }}>
             <Typography textAlign="center" className="text-white flex items-center">
-              <Notifications className="text-primary" />
+              <NotificationsOutlined className="text-primary" />
             </Typography>
           </IconButton>
         </Tooltip>
