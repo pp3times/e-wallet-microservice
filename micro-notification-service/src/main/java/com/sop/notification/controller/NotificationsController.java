@@ -40,7 +40,7 @@ public class NotificationsController {
     }
 
     @PostMapping("/date")
-    @ApiOperation(value = "Transaction Logs By Date Range",notes = "Get Transaction Logs By Date Range")
+    @ApiOperation(value = "Transaction Logs By Date Range",notes = "Geset Transaction Logs By Date Range")
     @ApiImplicitParam(name = "Authorization", value = "Access Token", required = true, paramType = "header")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Success|OK"),

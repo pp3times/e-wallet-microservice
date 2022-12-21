@@ -11,6 +11,7 @@ import com.sop.auth.repository.RoleRepository;
 import com.sop.auth.repository.UserRepository;
 import com.sop.auth.security.jwt.JwtUtils;
 import com.sop.auth.security.services.UserDetailsImpl;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -45,6 +46,9 @@ public class AuthController {
     @Autowired
     JwtUtils jwtUtils;
 
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
 
@@ -58,6 +62,7 @@ public class AuthController {
         List<String> roles = userDetails.getAuthorities().stream()
                 .map(item -> item.getAuthority())
                 .collect(Collectors.toList());
+        rabbitTemplate.convertAndSend("MailDirectExchange","sendMail",userDetails.getEmail());
 
         return ResponseEntity.ok(new JwtResponse(jwt,
                 userDetails.getId(),
