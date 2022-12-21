@@ -1,5 +1,15 @@
 import { createTheme } from "@mui/material/styles";
 export const GolbalTheme = createTheme({
+  components: {
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "white",
+          color: "#20B367",
+        },
+      },
+    },
+  },
   typography: {
     fontFamily: "LineSeed",
   },
@@ -8,7 +18,7 @@ export const GolbalTheme = createTheme({
   },
   palette: {
     primary: {
-      main: "#2B3467",
+      main: "#20B367",
       contrastText: "#fff",
     },
     neutral: {

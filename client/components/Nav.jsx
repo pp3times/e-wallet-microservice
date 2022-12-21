@@ -1,12 +1,8 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
 import Tooltip from "@mui/material/Tooltip";
-import LogoutIcon from "@mui/icons-material/Logout";
+import { Notifications, Logout, Person } from "@mui/icons-material";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { deleteCookie, getCookie } from "cookies-next";
@@ -16,10 +12,10 @@ function ResponsiveAppBar() {
   const [studentId, setStudentId] = useState("");
   const router = useRouter();
 
-  useEffect(() => {
-    setName(JSON.parse(getCookie("user")).name);
-    setStudentId(JSON.parse(getCookie("user")).studentId);
-  }, []);
+  // useEffect(() => {
+  //   setName(JSON.parse(getCookie("user")).name);
+  //   setStudentId(JSON.parse(getCookie("user")).studentId);
+  // }, []);
 
   const handleLogout = () => {
     deleteCookie("user");
@@ -27,51 +23,31 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            {name} - {studentId}
-          </Typography>
+    <div className="flex justify-between items-center py-3 w-full px-5">
+      <div className="rounded-full bg-primary/20 p-1">
+        <Person className="text-primary text-3xl" />
+      </div>
 
-          <Typography
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            {name} - {studentId}
-          </Typography>
+      <p className="text-lg font-semibold text-primary uppercase">schoolletpay</p>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleLogout} sx={{ p: 0 }}>
-                <Typography textAlign="center" className="text-white flex items-center">
-                  <LogoutIcon />
-                </Typography>
-              </IconButton>
-            </Tooltip>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+      <div className="flex items-center gap-x-5">
+        <Tooltip title="Open settings">
+          <IconButton onClick={handleLogout} sx={{ p: 0 }}>
+            <Typography textAlign="center" className="text-white flex items-center">
+              <Notifications className="text-primary" />
+            </Typography>
+          </IconButton>
+        </Tooltip>
+
+        <Tooltip title="Open settings">
+          <IconButton onClick={handleLogout} sx={{ p: 0 }}>
+            <Typography textAlign="center" className="text-white flex items-center">
+              <Logout className="text-primary" />
+            </Typography>
+          </IconButton>
+        </Tooltip>
+      </div>
+    </div>
   );
 }
 export default ResponsiveAppBar;

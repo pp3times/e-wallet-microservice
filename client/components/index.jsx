@@ -1,3 +1,4 @@
 import Layout from "./Layout";
-
-export { Layout };
+import Nav from "./Nav";
+import BottomNavigate from "./BottomNavigate";
+export { Layout, Nav, BottomNavigate };

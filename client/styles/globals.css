@@ -5,5 +5,6 @@
 
 @font-face {
   font-family: "LineSeed";
-  src: url("../public/fonts/LINESeedSansTH_Rg.otf");
+  src: url("../public/fonts/LINESeedSansTH_Rg.otf"), url("../public/fonts/LINESeedSansTH_He.otf"), url("../public/fonts/LINESeedSansTH_Bd.otf"),
+    url("../public/fonts/LINESeedSansTH_Th.otf"), url("../public/fonts/LINESeedSansTH_XBd.otf");
 }
