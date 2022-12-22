@@ -3,7 +3,9 @@ package com.sop.account.controller;
 
 import com.sop.account.dto.AccountDto;
 import com.sop.account.dto.AccountRequestDto;
+import com.sop.account.dto.WalletDto;
 import com.sop.account.service.AccountService;
+import com.sop.account.service.WalletService;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -18,6 +20,8 @@ public class AccountController {
 
     @Autowired
     AccountService accountService;
+    @Autowired
+    WalletService walletService;
 
     @PostMapping("/create")
     @ApiOperation(value = "Create Account",notes = "Create Account",code = 200)
@@ -43,6 +47,12 @@ public class AccountController {
             @ApiResponse(code = 201, message = "Created", response = AccountDto.class) })
     public ResponseEntity<?> updateAccount(@RequestBody @Valid AccountRequestDto data){
         return ResponseEntity.ok().body(accountService.updateAccount(data));
+    }
+
+    @GetMapping("/wallet/{walletAddress}")
+    public WalletDto getWallet(@PathVariable("walletAddress") String walletAddress){
+        WalletDto walletDto = walletService.getWallet(walletAddress);
+        return walletDto;
     }
 
 }
