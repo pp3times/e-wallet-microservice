@@ -1,0 +1,6 @@
+server:
+  port: 6789
+  compression.enabled: true
+
+grpc:
+  port: 6790

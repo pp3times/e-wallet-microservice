@@ -3,16 +3,16 @@ package payment;
 option java_package = "com.proto.payment";
 option java_multiple_files = true;
 
-message CreatePaymentRequest {
+message PaymentRequest {
   string stripe_api_key = 1;
   string payment_method_id = 2;
   int32 amount = 3;
 }
 
-message CreatePaymentResponse {
+message PaymentResponse {
   string id = 1;
   string status = 2;
 }
 service PaymentService {
-  rpc CreatePayment (CreatePaymentRequest) returns (CreatePaymentResponse) {}
+  rpc CreatePayment (PaymentRequest) returns (PaymentResponse) {}
 }
