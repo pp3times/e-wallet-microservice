@@ -5,6 +5,7 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 import { useForm } from "react-hook-form";
 import { useState } from "react";
@@ -13,17 +14,23 @@ import Modal from "../Modal";
 
 const Topup = () => {
     const [isLoading, setLoading] = useState(false);
-    const [openModal, setOpenModal] = useState(false);
+    const [openSuccessModal, setOpenSuccessModal] = useState(false);
+    const [openCheckModal, setOpenCheckModal] = useState(false);
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
+        setOpenCheckModal(true);
+    };
+
+    const handleTopup = (data) => {
+        setOpenCheckModal(false);
         setLoading(true);
         setTimeout(() => {
             setLoading(false);
-            setOpenModal(true);
-        }, 2000)
-        console.log(data)
-    };
+            setOpenSuccessModal(true);
+            reset();
+        }, 2000);
+    }
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="shadow rounded p-4 bg-white">
@@ -31,12 +38,20 @@ const Topup = () => {
             <div className="space-y-4">
                 <TextField label="เข้าเลขบัญชี" size="small" className="w-full" required defaultValue="" {...register("account")} />
                 <TextField label="จำนวนเงิน" size="small" className="w-full" type="number" required defaultValue="" {...register("amount")} />
-                <Button variant="contained" type="submit" startIcon={<CreditCardIcon/>}>ทำรายการเติมเงิน</Button>
+                <Button variant="contained" type="submit" startIcon={<CreditCardIcon />}>ทำรายการเติมเงิน</Button>
             </div>
 
             {isLoading ? <Loading /> : null}
 
-            <Modal title="ทำรายการสำเร็จ" state={openModal} setState={setOpenModal}>
+            <Modal
+                title="ยืนยันการทำรายการเติมเงิน"
+                state={openCheckModal}
+                setState={setOpenCheckModal}
+                action={
+                    <Button variant="contained" endIcon={<NavigateNextIcon />} onClick={handleTopup}>ยืนยันการทำรายการ</Button>
+                }
+                closeText="ยกเลิก"
+            >
                 <TableContainer>
                     <Table>
                         <TableBody>
@@ -45,7 +60,24 @@ const Topup = () => {
                                 <TableCell align="right">cbc700fc-7fa7-4d61-a156-896bf8085aa5</TableCell>
                             </TableRow>
                             <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                                <TableCell>ยอดเงิน</TableCell>
+                                <TableCell>จำนวนเงิน</TableCell>
+                                <TableCell align="right">1,000 บาท</TableCell>
+                            </TableRow>
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            </Modal>
+
+            <Modal title="ทำรายการสำเร็จ" state={openSuccessModal} setState={setOpenSuccessModal}>
+                <TableContainer>
+                    <Table>
+                        <TableBody>
+                            <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                                <TableCell>เข้าบัญชีกระเป๋าเงิน</TableCell>
+                                <TableCell align="right">cbc700fc-7fa7-4d61-a156-896bf8085aa5</TableCell>
+                            </TableRow>
+                            <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                                <TableCell>จำนวนเงิน</TableCell>
                                 <TableCell align="right">1,000 บาท</TableCell>
                             </TableRow>
                             <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>

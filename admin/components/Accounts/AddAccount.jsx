@@ -45,7 +45,7 @@ const AddAccount = () => {
                 state={openCheckModal}
                 setState={setOpenCheckModal}
                 action={
-                    <Button endIcon={<NavigateNextIcon/>} onClick={() => handleSubmit()} variant="contained">ยืนยันการดำเนินการร</Button>
+                    <Button endIcon={<NavigateNextIcon/>} onClick={() => handleSubmit()} variant="contained">ยืนยันการเพิ่มบัญชี</Button>
                 }
             >
                 <TableContainer>
