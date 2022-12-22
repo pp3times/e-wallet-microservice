@@ -5,7 +5,7 @@ import "../styles/globals.css";
 function Home({ Component, pageProps }) {
   return (
     <ThemeProvider theme={GolbalTheme}>
-      <CssBaseline /> 
+      <CssBaseline />
       <Component {...pageProps} />
     </ThemeProvider>
   );

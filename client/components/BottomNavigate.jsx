@@ -7,7 +7,7 @@ const BottomNavigate = () => {
   const router = useRouter();
   const [status, setStatus] = useState({
     "/": false,
-    "/account": false,
+    "/transaction": false,
     "/service": false,
     "/profile": false,
   });
@@ -27,8 +27,8 @@ const BottomNavigate = () => {
           <HomeOutlined className={"text-3xl duration-300 " + (status["/"] && "rounded-full bg-white/20 w-10 h-10")} />
           <p className="text-sm">หน้าหลัก</p>
         </Link>
-        <Link href="" className="flex flex-col items-center ">
-          <WalletOutlined className={"text-3xl duration-300 " + (status["/account"] && "rounded-full bg-white/20 w-10 h-10")} />
+        <Link href="/transaction" className="flex flex-col items-center ">
+          <WalletOutlined className={"text-3xl duration-300 " + (status["/transaction"] && "rounded-full bg-white/20 w-10 h-10")} />
           <p className="text-sm">บัญชี</p>
         </Link>
       </div>
