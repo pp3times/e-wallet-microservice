@@ -43,15 +43,15 @@ export default function SimpleBottomNavigation() {
         <div className="flex flex-col w-full rounded-t-2xl  border-t border-zinc-300 mt-2 px-3 py-5">
           <p className="font-semibold text-sm">เมนูทำรายการ</p>
           <div className="flex items-center justify-start gap-x-5 mt-5">
-            <Link href="/exchange" className="bg-primary/20 rounded-md h-20 w-20 flex flex-col items-center justify-center text-primary shadow-xl">
+            <Link href="/exchange" className="bg-primary/20 rounded-md h-20 w-20 flex flex-col items-center justify-center text-primary shadow-xl duration-300 hover:scale-90">
               <PaidOutlined className="text-3xl font-bold" />
               <p>โอนเงิน</p>
             </Link>
-            <Link href="/topup" className="bg-primary/20 rounded-md h-20 w-20 flex flex-col items-center justify-center text-primary shadow-xl">
+            <Link href="/topup" className="bg-primary/20 rounded-md h-20 w-20 flex flex-col items-center justify-center text-primary shadow-xl duration-300 hover:scale-90">
               <WalletOutlined className="text-3xl font-bold" />
               <p>เติมเงิน</p>
             </Link>
-            <Link href="" className="bg-primary/20 rounded-md h-20 w-20 flex flex-col items-center justify-center text-primary shadow-xl">
+            <Link href="" className="bg-primary/20 rounded-md h-20 w-20 flex flex-col items-center justify-center text-primary shadow-xl duration-300 hover:scale-90">
               <QueryStatsOutlined className="text-3xl font-bold" />
               <p>ภาพรวม</p>
             </Link>

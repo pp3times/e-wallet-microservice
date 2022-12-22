@@ -31,7 +31,7 @@ const TopUp = () => {
         <div className="bg-white rounded-t-xl w-full flex-grow mt-10 px-5 pt-4 text-black">
           <p className="font-bold text-sm">เลือกวิธีการเติมเงิน</p>
           <div className="flex items-center mt-5 gap-x-5">
-            <Link href="/topup/topupInputs" className="flex flex-col items-center">
+            <Link href="/topup/topupInput" className="flex flex-col items-center">
               <div className="bg-blue-100 rounded-full p-2 border-4">
                 <WalletOutlined className="text-5xl text-blue-900" />
               </div>

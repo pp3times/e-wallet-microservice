@@ -15,11 +15,11 @@ const CardWallet = () => {
         </svg>
       </div>
       <div className="flex items-center justify-between w-full p-5 gap-x-10">
-        <Link href="/exchange" className="flex items-center justify-center bg-primary/20 text-primary gap-x-2 py-2 w-2/4 rounded-md">
+        <Link href="/exchange" className="flex items-center justify-center bg-primary/20 text-primary gap-x-2 py-2 w-2/4 rounded-md duration-300 hover:scale-90">
           <WalletOutlined />
           <p className="text-black font-bold">เติมเงิน</p>
         </Link>
-        <Link href="/topup" className="flex items-center justify-center bg-primary/20 text-primary gap-x-2 py-2 w-2/4 rounded-md">
+        <Link href="/topup" className="flex items-center justify-center bg-primary/20 text-primary gap-x-2 py-2 w-2/4 rounded-md duration-300 hover:scale-90">
           <ImportExportOutlined />
           <p className="text-black font-bold">โอนเงิน</p>
         </Link>
