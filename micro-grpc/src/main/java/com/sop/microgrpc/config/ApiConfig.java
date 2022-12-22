@@ -1,4 +1,4 @@
-package config;
+package com.sop.microgrpc.config;
 
 import lombok.Data;
 import org.springframework.context.annotation.Bean;

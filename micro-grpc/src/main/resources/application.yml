@@ -4,3 +4,4 @@ server:
 
 grpc:
   port: 6790
+

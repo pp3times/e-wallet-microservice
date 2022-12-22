@@ -1,13 +1,14 @@
-package controller;
+package com.sop.microgrpc.controller;
 
-import com.proto.payment.PaymentRequest;
-import com.proto.payment.PaymentResponse;
-import com.proto.payment.PaymentServiceGrpc;
+import com.proto.payments.PaymentRequest;
+import com.proto.payments.PaymentResponse;
+import com.proto.payments.PaymentServiceGrpc;
+import com.sop.microgrpc.service.CreatePaymentService;
 import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
-import service.CreatePaymentService;
+
 
 @Slf4j
 @GrpcService
