@@ -31,13 +31,13 @@ function ResponsiveAppBar() {
       <p className="text-lg font-semibold text-primary uppercase">schoolletpay</p>
 
       <div className="flex items-center gap-x-5">
-        <Tooltip title="Open settings">
+        {/* <Tooltip title="Open settings">
           <IconButton onClick={handleLogout} sx={{ p: 0 }}>
             <Typography textAlign="center" className="text-white flex items-center">
               <NotificationsOutlined className="text-primary" />
             </Typography>
           </IconButton>
-        </Tooltip>
+        </Tooltip> */}
 
         <Tooltip title="Open settings">
           <IconButton onClick={handleLogout} sx={{ p: 0 }}>
