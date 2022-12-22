@@ -13,6 +13,7 @@
   display: none;
 }
 
-#reader video, #qr-shaded-region {
+#reader video,
+#qr-shaded-region {
   border-radius: 1rem;
 }
