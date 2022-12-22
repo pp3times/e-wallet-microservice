@@ -19,7 +19,7 @@ const SearchAccount = ({ setAccount }) => {
 
     const rows = [
         {
-            id: 1,
+            id: 100,
             firstName: 'Hello',
             lastName: 'World',
         }
@@ -30,7 +30,10 @@ const SearchAccount = ({ setAccount }) => {
         { field: 'lastName', headerName: 'นามสกุล', width: 150 },
         {
             field: 'id', headerName: 'รายละเอียด', renderCell: (params) => (
-                    <Button variant="contained" size="small">เปิด</Button>
+                    <Button variant="contained" size="small" onClick={()=>{
+                        console.log(params.value);
+                        setAccount(params.value);
+                    }}>เปิด</Button>
             )
         }
     ];
@@ -38,7 +41,7 @@ const SearchAccount = ({ setAccount }) => {
     return (
         <>
             <form onSubmit={handleSubmit(onSubmit)} className="shadow rounded p-4 bg-white">
-                <h1 className="mb-4 m-0 text-base">ค้นหาบัญชีผู้ใช้งาน</h1>
+                <h1 className="mb-4 m-0 text-base">ค้นหาบัญชี</h1>
                 <div className="space-y-4 mb-4">
                     <TextField label="ชื่อจริง" size="small" className="w-full" defaultValue="" {...register("firstName")} />
                     <TextField label="นามสกุล" size="small" className="w-full" defaultValue="" {...register("lastName")} />

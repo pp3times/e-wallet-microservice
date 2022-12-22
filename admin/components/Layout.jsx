@@ -50,7 +50,7 @@ const Layout = ({ children, title }, props) => {
                             <ListItemIcon>
                                 <InboxIcon />
                             </ListItemIcon>
-                            <ListItemText primary={'บัญชีผู้ใช้งาน'} />
+                            <ListItemText primary={'บัญชี'} />
                         </ListItemButton>
                     </ListItem>
                 </Link>
