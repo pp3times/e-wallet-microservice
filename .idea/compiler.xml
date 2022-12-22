@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka-service" />
+        <module name="auth-service" />
+        <module name="gateway-service" />
+        <module name="transaction-service" />
+        <module name="micro-payment-grpc" />
+        <module name="Transaction-Service" />
+        <module name="account-service" />
+        <module name="demo" />
+        <module name="notification-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="account-service (1)" target="11" />
+      <module name="demo" target="17" />
+      <module name="micro-grpc" target="17" />
+      <module name="micro-grpc-service" target="17" />
+      <module name="micro-grpc.main" target="17" />
+      <module name="micro-grpc.test" target="17" />
+      <module name="micro-payment-grpc" target="17" />
+      <module name="micro-payment-gRPC" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Transaction-Service" options="-parameters" />
+      <module name="account-service" options="-parameters" />
+      <module name="account-service (1)" options="-parameters" />
+      <module name="auth-service" options="-parameters" />
+      <module name="demo" options="-parameters" />
+      <module name="eureka-service" options="-parameters" />
+      <module name="gateway-service" options="-parameters" />
+      <module name="micro-grpc-service" options="-parameters" />
+      <module name="micro-payment-gRPC" options="-parameters" />
+      <module name="micro-payment-grpc" options="-parameters" />
+      <module name="notification-service" options="-parameters" />
+      <module name="transaction-service" options="-parameters" />
+    </option>
+  </component>
+</project>
