@@ -12,6 +12,7 @@
         <module name="gateway-service" />
         <module name="transaction-service" />
         <module name="micro-payment-grpc" />
+        <module name="Transaction-Service" />
         <module name="account-service" />
         <module name="demo" />
         <module name="notification-service" />
@@ -27,6 +28,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Transaction-Service" options="-parameters" />
       <module name="account-service" options="-parameters" />
       <module name="account-service (1)" options="-parameters" />
       <module name="auth-service" options="-parameters" />
