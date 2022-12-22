@@ -70,7 +70,7 @@ const Profile = () => {
                 <>
                   <div className="py-2">
                     <h1>{transaction.type}</h1>
-                    <p className="text-2xl">{transaction.amount} บาท</p>
+                    <p className="text-2xl">{transaction.amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} บาท</p>
                     <div className="flex justify-between text-xs">
                       <p>{transaction.type === 'รับเงินเข้า' ? 'จากบัญชี' : 'เข้าบัญชี'} {transaction.account}</p>
                       <p>{transaction.datetime}</p>
