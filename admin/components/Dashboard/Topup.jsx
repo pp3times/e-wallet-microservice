@@ -42,7 +42,7 @@ const Topup = () => {
                         <TableBody>
                             <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                                 <TableCell>เข้าบัญชีกระเป๋าเงิน</TableCell>
-                                <TableCell align="right">123-456-7890</TableCell>
+                                <TableCell align="right">cbc700fc-7fa7-4d61-a156-896bf8085aa5</TableCell>
                             </TableRow>
                             <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                                 <TableCell>ยอดเงิน</TableCell>

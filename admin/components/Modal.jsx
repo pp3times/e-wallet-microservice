@@ -33,7 +33,7 @@ const Modal = ({ title, children, action=null, closeText=null, state=false, setS
                     {children}
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose}>{closeText ?? 'ปิดหน้าต่าง'}</Button>
+                    <Button color="neutral" onClick={handleClose}>{closeText ?? 'ปิดหน้าต่าง'}</Button>
                     {action}
                 </DialogActions>
             </Dialog>

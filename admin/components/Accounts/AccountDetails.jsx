@@ -9,6 +9,7 @@ import Loading from "../Loading";
 import Modal from "../Modal";
 import { useState } from "react"
 import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 
 const AccountDetails = ({ account, setAccount }) => {
     const [isLoading, setLoading] = useState(false);
@@ -25,6 +26,10 @@ const AccountDetails = ({ account, setAccount }) => {
         console.log("Delete!");
     }
 
+    const handleEdit = () => {
+        console.log("Edit!");
+    }
+
     return (
         <>
             <div className="shadow rounded p-4 bg-white h-fit">
@@ -33,7 +38,10 @@ const AccountDetails = ({ account, setAccount }) => {
                         รายละเอียดบัญชีของ<br />
                         <span className="text-2xl">Thanawat Chuensooksri</span>
                     </h1>
-                    <Button startIcon={<DeleteIcon/>} variant="contained" size="small" color="error" onClick={() => setOpenDeleteModal(true)}>ลบบัญชี</Button>
+                    <div className='flex gap-2'>
+                        <Button startIcon={<DeleteIcon />} size="small" color="error" onClick={() => setOpenDeleteModal(true)}>ลบบัญชี</Button>
+                        <Button startIcon={<EditIcon />} size="small" color="neutral" onClick={handleEdit}>แก้ไขข้อมูล</Button>
+                    </div>
                 </div>
                 <TableContainer>
                     <Table>
@@ -44,7 +52,7 @@ const AccountDetails = ({ account, setAccount }) => {
                             </TableRow>
                             <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                                 <TableCell>เลขบัญชี</TableCell>
-                                <TableCell align="right">123-456-7890</TableCell>
+                                <TableCell align="right">cbc700fc-7fa7-4d61-a156-896bf8085aa5</TableCell>
                             </TableRow>
                             <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                                 <TableCell>จำนวนเงินคงเหลือ</TableCell>
@@ -60,7 +68,7 @@ const AccountDetails = ({ account, setAccount }) => {
                 state={openDeleteModal}
                 setState={setOpenDeleteModal}
                 action={
-                    <Button startIcon={<DeleteIcon/>} color="error" variant="contained" onClick={handleDelete}>ยืนยันการลบบัญชี</Button>
+                    <Button startIcon={<DeleteIcon />} color="error" variant="contained" onClick={handleDelete}>ยืนยันการลบบัญชี</Button>
                 }
             >
                 <TableContainer>
@@ -72,7 +80,7 @@ const AccountDetails = ({ account, setAccount }) => {
                             </TableRow>
                             <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                                 <TableCell>เลขบัญชี</TableCell>
-                                <TableCell align="right">123-456-7890</TableCell>
+                                <TableCell align="right">cbc700fc-7fa7-4d61-a156-896bf8085aa5</TableCell>
                             </TableRow>
                             <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                                 <TableCell>จำนวนเงินคงเหลือ</TableCell>

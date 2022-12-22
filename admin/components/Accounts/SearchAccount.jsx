@@ -26,7 +26,13 @@ const SearchAccount = ({ setAccount }) => {
             id: 100,
             firstName: 'Hello',
             lastName: 'World',
-            accountNumber: '123-456-7890',
+            accountNumber: 'cbc700fc-7fa7-4d61-a156-896bf8085aa5',
+        },
+        {
+            id: 200,
+            firstName: 'Jame',
+            lastName: 'Ant',
+            accountNumber: 'at6700fc-7fa7-4d61-a156-896bf8085aa5',
         }
     ];
 

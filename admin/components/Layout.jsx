@@ -23,6 +23,11 @@ import { useState } from "react";
 
 const drawerWidth = 240;
 
+const handleLogout = () => {
+    console.log('Logout!');
+    window.location.replace('/login');
+}
+
 const Layout = ({ children, title }, props) => {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -58,7 +63,7 @@ const Layout = ({ children, title }, props) => {
             <Divider />
             <List>
                 <ListItem disablePadding>
-                    <ListItemButton>
+                    <ListItemButton onClick={handleLogout}>
                         <ListItemIcon>
                             <LogoutIcon />
                         </ListItemIcon>
