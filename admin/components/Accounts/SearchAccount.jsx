@@ -47,7 +47,7 @@ const SearchAccount = ({ setAccount }) => {
                     <TextField label="นามสกุล" size="small" className="w-full" defaultValue="" {...register("lastName")} />
                     <Button variant="contained" type="submit">ค้นหา</Button>
                 </div>
-                <Divider className="mb-4">ผการค้นหา</Divider>
+                <Divider className="mb-4">ผลการค้นหา</Divider>
                 <div>
                     <div style={{ height: 300, width: '100%' }}>
                         <DataGrid rows={rows} columns={columns} disableSelectionOnClick />

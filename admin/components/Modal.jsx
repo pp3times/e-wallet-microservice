@@ -2,26 +2,24 @@ import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 import { useState } from "react";
 
-const Modal = ({ title, children }) => {
-    const [open, setOpen] = useState(true);
+const Modal = ({ title, children, action=null, closeText=null, state=false, setState }) => {
 
     const handleClickOpen = () => {
-        setOpen(true);
+        setState(true);
     };
 
     const handleClose = () => {
-        setOpen(false);
+        setState(false);
     };
 
     return (
         <>
             <Dialog
-                open={open}
+                open={state}
                 onClose={handleClose}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
@@ -35,7 +33,8 @@ const Modal = ({ title, children }) => {
                     {children}
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose}>ปิดหน้าต่าง</Button>
+                    <Button onClick={handleClose}>{closeText ?? 'ปิดหน้าต่าง'}</Button>
+                    {action}
                 </DialogActions>
             </Dialog>
         </>
