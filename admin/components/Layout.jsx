@@ -17,6 +17,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 import { useState } from "react";
 
@@ -32,8 +33,6 @@ const Layout = ({ children, title }, props) => {
 
     const drawer = (
         <div>
-            <Toolbar />
-            <Divider />
             <List>
                 <Link href={'/'} className="no-underline text-black">
                     <ListItem disablePadding>
@@ -55,6 +54,17 @@ const Layout = ({ children, title }, props) => {
                         </ListItemButton>
                     </ListItem>
                 </Link>
+            </List>
+            <Divider />
+            <List>
+                <ListItem disablePadding>
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <LogoutIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={'ออกจากระบบ'} />
+                    </ListItemButton>
+                </ListItem>
             </List>
         </div>
     );
