@@ -34,32 +34,27 @@ const Topup = () => {
             </div>
 
             {isLoading ? <Loading /> : null}
-            {
-                openModal
-                    ? (
-                        <Modal title="ทำรายการสำเร็จ">
-                            <TableContainer>
-                                <Table>
-                                    <TableBody>
-                                        <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                                            <TableCell>เข้าบัญชีกระเป๋าเงิน</TableCell>
-                                            <TableCell align="right">123-456-7890</TableCell>
-                                        </TableRow>
-                                        <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                                            <TableCell>ยอดเงิน</TableCell>
-                                            <TableCell align="right">1,000 บาท</TableCell>
-                                        </TableRow>
-                                        <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                                            <TableCell>ทำรายการเมื่อ</TableCell>
-                                            <TableCell align="right">2022-12-05 12:30</TableCell>
-                                        </TableRow>
-                                    </TableBody>
-                                </Table>
-                            </TableContainer>
-                        </Modal>
-                    )
-                    : null
-            }
+
+            <Modal title="ทำรายการสำเร็จ" state={openModal} setState={setOpenModal}>
+                <TableContainer>
+                    <Table>
+                        <TableBody>
+                            <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                                <TableCell>เข้าบัญชีกระเป๋าเงิน</TableCell>
+                                <TableCell align="right">123-456-7890</TableCell>
+                            </TableRow>
+                            <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                                <TableCell>ยอดเงิน</TableCell>
+                                <TableCell align="right">1,000 บาท</TableCell>
+                            </TableRow>
+                            <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                                <TableCell>ทำรายการเมื่อ</TableCell>
+                                <TableCell align="right">2022-12-05 12:30</TableCell>
+                            </TableRow>
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            </Modal>
         </form >
     );
 }

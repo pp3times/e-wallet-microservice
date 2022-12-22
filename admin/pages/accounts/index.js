@@ -1,9 +1,10 @@
-import SearchAccount from "../components/Accounts/SearchAccount";
-import Layout from "../components/Layout"
+import SearchAccount from "../../components/Accounts/SearchAccount";
+import Layout from "../../components/Layout";
 
 import { useState } from "react";
-import AccountDetails from "../components/Accounts/AccountDetails";
+import AccountDetails from "../../components/Accounts/AccountDetails";
 import { Button } from "@mui/material";
+import Link from "next/link";
 
 const Index = () => {
   const [account, setAccount] = useState(null);
@@ -11,7 +12,7 @@ const Index = () => {
   return (
     <Layout title="บัญชี">
       <div className="mb-4">
-        <Button variant="contained">เพิ่มบัญชีใหม่</Button>
+        <Link href={'/accounts/add'} className="no-underline"><Button variant="contained">เพิ่มบัญชีใหม่</Button></Link>
       </div>
       <div className={`grid grid-cols-1 gap-4 ${ account !== null ? 'xl:grid-cols-2' : null }`}>
         <SearchAccount setAccount={setAccount} />
