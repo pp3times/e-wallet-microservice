@@ -7,10 +7,8 @@ const Index = () => {
     <Layout title="แดชบอร์ด">
       <div className="grid gap-4">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-          <Card title={'จำนวนบัญชีผู้ใช้ในระบบ'} value={"1,122"} />
-          <Card title={'จำนวนบัญชีผู้ใช้ในระบบ'} value={"1,122"} />
-          <Card title={'จำนวนบัญชีผู้ใช้ในระบบ'} value={"1,122"} />
-          <Card title={'จำนวนบัญชีผู้ใช้ในระบบ'} value={"1,122"} />
+          <Card title={'บัญชีผู้ใช้ในระบบ (บัญชี)'} value={"1,122"} />
+          <Card title={'เงินหมุนเวียนในระบบ (บาท)'} value={"54,361.36"} />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2">
           <Topup />

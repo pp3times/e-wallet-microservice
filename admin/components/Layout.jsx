@@ -63,7 +63,7 @@ const Layout = ({ children, title }, props) => {
     return (
         <>
             <Head>
-                <title>{title}</title>
+                <title>{title} - ระบบจัดการ S-WALLET</title>
             </Head>
             <Box sx={{ display: 'flex' }}>
                 <CssBaseline />

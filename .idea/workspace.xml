@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3bf6c669-fa0c-49f6-bfb0-3d7d5feec01e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/sop/auth/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sop/auth/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/sop/auth/security/services/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sop/auth/security/services/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/sop/auth/security/services/RabbitEmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sop/auth/security/services/RabbitEmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-service/src/main/java/com/ewal/eurekaservice/EurekaServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/thun/Desktop/e-wallet-microservice",
+    "last_opened_file_path": "C:/projects/e-wallet-microservice",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -136,6 +130,7 @@
       <option name="presentableId" value="Default" />
       <updated>1671714642396</updated>
       <workItem from="1671714646964" duration="1735000" />
+      <workItem from="1671726419282" duration="2004000" />
     </task>
     <servers />
   </component>

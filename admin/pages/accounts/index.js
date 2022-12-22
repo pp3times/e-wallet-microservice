@@ -16,7 +16,7 @@ const Index = () => {
       </div>
       <div className={`grid grid-cols-1 gap-4 ${ account !== null ? 'xl:grid-cols-2' : null }`}>
         <SearchAccount setAccount={setAccount} />
-        { account !== null ? <AccountDetails account={account} /> : null }
+        { account !== null ? <AccountDetails account={account} setAccount={setAccount} /> : null }
       </div>
     </Layout>
   );

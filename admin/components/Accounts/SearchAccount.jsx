@@ -7,11 +7,13 @@ import Loading from "../Loading";
 
 const SearchAccount = ({ setAccount }) => {
     const [isLoading, setLoading] = useState(false);
+    const [result, setResult] = useState(null);
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         setLoading(true);
         setTimeout(() => {
+            setResult(rows);
             setLoading(false);
         }, 2000)
         console.log(data)
@@ -22,18 +24,20 @@ const SearchAccount = ({ setAccount }) => {
             id: 100,
             firstName: 'Hello',
             lastName: 'World',
+            accountNumber: '123-456-7890',
         }
     ];
 
     const columns = [
-        { field: 'firstName', headerName: 'ขื่อจริง', width: 150 },
-        { field: 'lastName', headerName: 'นามสกุล', width: 150 },
+        { field: 'firstName', headerName: 'ขื่อจริง', width: 200 },
+        { field: 'lastName', headerName: 'นามสกุล', width: 200 },
+        { field: 'accountNumber', headerName: 'เลขบัญชี', width: 200 },
         {
             field: 'id', headerName: 'รายละเอียด', renderCell: (params) => (
-                    <Button variant="contained" size="small" onClick={()=>{
-                        console.log(params.value);
-                        setAccount(params.value);
-                    }}>เปิด</Button>
+                <Button variant="contained" size="small" onClick={() => {
+                    console.log(params.value);
+                    setAccount(params.value);
+                }}>เปิด</Button>
             )
         }
     ];
@@ -45,14 +49,23 @@ const SearchAccount = ({ setAccount }) => {
                 <div className="space-y-4 mb-4">
                     <TextField label="ชื่อจริง" size="small" className="w-full" defaultValue="" {...register("firstName")} />
                     <TextField label="นามสกุล" size="small" className="w-full" defaultValue="" {...register("lastName")} />
+                    <TextField label="เลขบัญชี" size="small" className="w-full" defaultValue="" {...register("accountNumber")} />
                     <Button variant="contained" type="submit">ค้นหา</Button>
                 </div>
-                <Divider className="mb-4">ผลการค้นหา</Divider>
-                <div>
-                    <div style={{ height: 300, width: '100%' }}>
-                        <DataGrid rows={rows} columns={columns} disableSelectionOnClick />
-                    </div>
-                </div>
+                {
+                    result !== null
+                        ? (
+                            <>
+                                <Divider className="mb-4">ผลการค้นหา</Divider>
+                                <div>
+                                    <div style={{ height: 300, width: '100%' }}>
+                                        <DataGrid rows={result} columns={columns} disableSelectionOnClick />
+                                    </div>
+                                </div>
+                            </>
+                        )
+                        : null
+                }
             </form >
 
             {isLoading ? <Loading /> : null}
