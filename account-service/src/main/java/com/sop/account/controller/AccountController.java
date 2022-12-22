@@ -20,8 +20,6 @@ public class AccountController {
 
     @Autowired
     AccountService accountService;
-    @Autowired
-    WalletService walletService;
 
     @PostMapping("/create")
     @ApiOperation(value = "Create Account",notes = "Create Account",code = 200)
@@ -49,10 +47,5 @@ public class AccountController {
         return ResponseEntity.ok().body(accountService.updateAccount(data));
     }
 
-    @GetMapping("/wallet/{walletAddress}")
-    public WalletDto getWallet(@PathVariable("walletAddress") String walletAddress){
-        WalletDto walletDto = walletService.getWallet(walletAddress);
-        return walletDto;
-    }
 
 }

@@ -11,6 +11,7 @@ public class WalletServiceImpl implements WalletService{
     @Autowired
     WalletRepository walletRepository;
 
+    @Override
     public WalletDto getWallet(String walletAddress){
         Wallet wallet = walletRepository.findByWalletAddress(walletAddress);
         WalletDto walletDto = new WalletDto();
