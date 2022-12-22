@@ -46,8 +46,8 @@ public class AuthController {
     @Autowired
     JwtUtils jwtUtils;
 
-//    @Autowired
-//    private RabbitTemplate rabbitTemplate;
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
 
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
@@ -63,7 +63,7 @@ public class AuthController {
                 .map(item -> item.getAuthority())
                 .collect(Collectors.toList());
 //        String userEmail = userDetails.getEmail();
-//        rabbitTemplate.convertAndSend("MailDirectExchange","sendMail",userEmail);
+        rabbitTemplate.convertAndSend("MailDirectExchange","sendMail",userDetails);
 
         return ResponseEntity.ok(new JwtResponse(jwt,
                 userDetails.getId(),

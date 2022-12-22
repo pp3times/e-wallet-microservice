@@ -14,14 +14,14 @@ public class WalletController {
     @Autowired
     WalletService walletService;
 
-    @GetMapping("/wallet/{walletAddress}")
+    @GetMapping("wallet/{walletAddress}")
     public WalletDto getWallet(@PathVariable("walletAddress") String walletAddress){
         WalletDto walletDto = walletService.getWallet(walletAddress);
         return walletDto;
     }
 
-    @GetMapping("/test")
-    public String getTest(){
-        return "test";
-    }
+//    @GetMapping("/test")
+//    public String getTest(){
+//        return "test";
+//    }
 }

@@ -66,10 +66,14 @@ public class TransactionController {
     }
 
     @GetMapping("/transactions/{accountId}")
-    public List<TransactionDto> getTransactionLog(@PathVariable("accountId") Long accountId){
-        List<TransactionDto> transactionDto = transactionService.getTransaction(accountId);
-        return transactionDto;
+    public List<TransactionDto> getTransactionLog(@PathVariable("accountId") Long accountNo){
+        List<TransactionDto> transactionDtoList = transactionService.getTransaction(accountNo);
+        return transactionDtoList;
     }
 
+//    @GetMapping("/test")
+//    public String test(){
+//        return "test";
+//    }
 
 }
