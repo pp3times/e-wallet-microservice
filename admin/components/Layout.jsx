@@ -26,7 +26,7 @@ const drawerWidth = 240;
 
 const handleLogout = () => {
     cookie.deleteCookie('token');
-    window.location.replace('/login');
+    window.location.replace('/');
 }
 
 const Layout = ({ children, title }, props) => {

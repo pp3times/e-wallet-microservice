@@ -1,8 +1,14 @@
 import Card from "../components/Dashboard/Card";
 import Topup from "../components/Dashboard/Topup";
-import Layout from "../components/Layout"
+import Layout from "../components/Layout";
+import { Auth } from "../components/Auth";
+import { useEffect } from "react";
 
-const Index = () => {
+const Index = ({ token }) => {
+  useEffect(()=>{
+    console.log(token);
+  }, []);
+
   return (
     <Layout title="แดชบอร์ด">
       <div className="grid gap-4">
@@ -16,6 +22,21 @@ const Index = () => {
       </div>
     </Layout>
   );
+}
+
+export const getServerSideProps = async ({ req, res }) => {
+  if (!Auth(req.cookies?.token)) {
+    res.setHeader("Set-Cookie", `token=; Max-Age=0`);
+    return {
+      redirect: { destination: '/login', permanent: false },
+    }
+  }
+
+  const token = req.cookies.token;
+
+  return {
+    props: { token }
+  }
 }
 
 export default Index;
