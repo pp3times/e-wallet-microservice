@@ -8,6 +8,8 @@ import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
+import AddIcon from '@mui/icons-material/Add';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 const AddAccount = () => {
     const [isLoading, setLoading] = useState(false);
@@ -32,7 +34,7 @@ const AddAccount = () => {
                     <TextField label="ชื่อจริง" variant="outlined" className="w-full" size="small" required />
                     <TextField label="นามสกุล" variant="outlined" className="w-full" size="small" required />
                 </div>
-                <Button variant="contained" type="button" onClick={() => setOpenCheckModal(true)}>เพิ่มบัญชี</Button>
+                <Button startIcon={<AddIcon/>} variant="contained" type="button" onClick={() => setOpenCheckModal(true)}>เพิ่มบัญชี</Button>
             </form>
 
             {isLoading ? <Loading /> : null}
@@ -43,7 +45,7 @@ const AddAccount = () => {
                 state={openCheckModal}
                 setState={setOpenCheckModal}
                 action={
-                    <Button onClick={() => handleSubmit()} variant="contained">ยืนยันการดำเนินการร</Button>
+                    <Button endIcon={<NavigateNextIcon/>} onClick={() => handleSubmit()} variant="contained">ยืนยันการดำเนินการร</Button>
                 }
             >
                 <TableContainer>

@@ -8,6 +8,7 @@ import Loading from "../Loading";
 
 import Modal from "../Modal";
 import { useState } from "react"
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const AccountDetails = ({ account, setAccount }) => {
     const [isLoading, setLoading] = useState(false);
@@ -32,7 +33,7 @@ const AccountDetails = ({ account, setAccount }) => {
                         รายละเอียดบัญชีของ<br />
                         <span className="text-2xl">Thanawat Chuensooksri</span>
                     </h1>
-                    <Button variant="contained" size="small" color="error" onClick={() => setOpenDeleteModal(true)}>ลบบัญชี</Button>
+                    <Button startIcon={<DeleteIcon/>} variant="contained" size="small" color="error" onClick={() => setOpenDeleteModal(true)}>ลบบัญชี</Button>
                 </div>
                 <TableContainer>
                     <Table>
@@ -59,7 +60,7 @@ const AccountDetails = ({ account, setAccount }) => {
                 state={openDeleteModal}
                 setState={setOpenDeleteModal}
                 action={
-                    <Button color="error" variant="contained" onClick={handleDelete}>ยืนยันการลบบัญชี</Button>
+                    <Button startIcon={<DeleteIcon/>} color="error" variant="contained" onClick={handleDelete}>ยืนยันการลบบัญชี</Button>
                 }
             >
                 <TableContainer>

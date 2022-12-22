@@ -4,6 +4,8 @@ import { DataGrid } from '@mui/x-data-grid';
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import Loading from "../Loading";
+import SearchIcon from '@mui/icons-material/Search';
+import LaunchIcon from '@mui/icons-material/Launch';
 
 const SearchAccount = ({ setAccount }) => {
     const [isLoading, setLoading] = useState(false);
@@ -34,7 +36,7 @@ const SearchAccount = ({ setAccount }) => {
         { field: 'accountNumber', headerName: 'เลขบัญชี', width: 200 },
         {
             field: 'id', headerName: 'รายละเอียด', renderCell: (params) => (
-                <Button variant="contained" size="small" onClick={() => {
+                <Button startIcon={<LaunchIcon/>} variant="contained" size="small" onClick={() => {
                     console.log(params.value);
                     setAccount(params.value);
                 }}>เปิด</Button>
@@ -50,7 +52,7 @@ const SearchAccount = ({ setAccount }) => {
                     <TextField label="ชื่อจริง" size="small" className="w-full" defaultValue="" {...register("firstName")} />
                     <TextField label="นามสกุล" size="small" className="w-full" defaultValue="" {...register("lastName")} />
                     <TextField label="เลขบัญชี" size="small" className="w-full" defaultValue="" {...register("accountNumber")} />
-                    <Button variant="contained" type="submit">ค้นหา</Button>
+                    <Button variant="contained" type="submit" startIcon={<SearchIcon/>}>ค้นหา</Button>
                 </div>
                 {
                     result !== null

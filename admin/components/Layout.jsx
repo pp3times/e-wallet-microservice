@@ -7,7 +7,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -16,6 +16,7 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 
 import { useState } from "react";
 
@@ -38,7 +39,7 @@ const Layout = ({ children, title }, props) => {
                     <ListItem disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                <InboxIcon />
+                                <DashboardIcon />
                             </ListItemIcon>
                             <ListItemText primary={'แดชบอร์ด'} />
                         </ListItemButton>
@@ -48,7 +49,7 @@ const Layout = ({ children, title }, props) => {
                     <ListItem disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                <InboxIcon />
+                                <AccountBalanceIcon />
                             </ListItemIcon>
                             <ListItemText primary={'บัญชี'} />
                         </ListItemButton>

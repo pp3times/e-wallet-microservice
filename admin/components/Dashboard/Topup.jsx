@@ -4,6 +4,7 @@ import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
+import CreditCardIcon from '@mui/icons-material/CreditCard';
 
 import { useForm } from "react-hook-form";
 import { useState } from "react";
@@ -28,9 +29,9 @@ const Topup = () => {
         <form onSubmit={handleSubmit(onSubmit)} className="shadow rounded p-4 bg-white">
             <h1 className="mb-4 m-0 text-base">เติมเงิน</h1>
             <div className="space-y-4">
-                <TextField label="เข้าบัญชีกระเป๋าเงิน" size="small" className="w-full" required defaultValue="" {...register("account")} />
+                <TextField label="เข้าเลขบัญชี" size="small" className="w-full" required defaultValue="" {...register("account")} />
                 <TextField label="จำนวนเงิน" size="small" className="w-full" type="number" required defaultValue="" {...register("amount")} />
-                <Button variant="contained" type="submit">ทำรายการเติมเงิน</Button>
+                <Button variant="contained" type="submit" startIcon={<CreditCardIcon/>}>ทำรายการเติมเงิน</Button>
             </div>
 
             {isLoading ? <Loading /> : null}

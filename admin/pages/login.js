@@ -1,6 +1,7 @@
 import Head from "next/head";
 import TextField from '@mui/material/TextField';
 import { Button } from "@mui/material";
+import LoginIcon from '@mui/icons-material/Login';
 
 const Login = () => {
     return (
@@ -15,7 +16,7 @@ const Login = () => {
                         <div className="space-y-4">
                             <TextField required label="ชื่อผู้ใช้" variant="outlined" size="small" className="w-full" />
                             <TextField required label="รหัสผ่าน" variant="outlined" size="small" className="w-full" type={'password'} />
-                            <Button variant="contained">เข้าสู่ระบบ</Button>
+                            <Button startIcon={<LoginIcon/>} variant="contained">เข้าสู่ระบบ</Button>
                         </div>
                     </form>
                 </div>
