@@ -39,20 +39,14 @@ dependencies {
     runtimeOnly 'io.grpc:grpc-netty-shaded:1.51.0'
     implementation 'io.grpc:grpc-protobuf:1.51.0'
     implementation 'io.grpc:grpc-stub:1.51.0'
-    // https://mvnrepository.com/artifact/io.github.lognet/grpc-spring-boot-starter
     implementation group: 'io.github.lognet', name: 'grpc-spring-boot-starter', version: '4.9.1'
-    // https://mvnrepository.com/artifact/org.springframework/spring-web
     implementation group: 'org.springframework', name: 'spring-web', version: '4.3.11.RELEASE'
-    // https://mvnrepository.com/artifact/net.devh/grpc-client-spring-boot-starter
     implementation group: 'net.devh', name: 'grpc-client-spring-boot-starter', version: '2.14.0.RELEASE'
-
-    // https://mvnrepository.com/artifact/org.projectlombok/lombok
-    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
-
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-test', version: '3.0.0'
     implementation group: 'net.devh', name: 'grpc-server-spring-boot-starter', version: '2.14.0.RELEASE'
-    // https://mvnrepository.com/artifact/com.stripe/stripe-java
     implementation group: 'com.stripe', name: 'stripe-java', version: '22.3.0'
-
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '3.0.0'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
     compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
 }
 
