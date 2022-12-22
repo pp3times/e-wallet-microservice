@@ -62,8 +62,8 @@ public class AuthController {
         List<String> roles = userDetails.getAuthorities().stream()
                 .map(item -> item.getAuthority())
                 .collect(Collectors.toList());
-//        String userEmail = userDetails.getEmail();
-//        rabbitTemplate.convertAndSend("MailDirectExchange","sendMail",userEmail);
+        String userEmail = userDetails.getEmail();
+        rabbitTemplate.convertAndSend("MailDirectExchange","sendMail",userEmail);
 
         return ResponseEntity.ok(new JwtResponse(jwt,
                 userDetails.getId(),
