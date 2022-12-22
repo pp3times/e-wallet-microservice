@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import * as cookie from 'cookies-next';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -24,7 +25,7 @@ import { useState } from "react";
 const drawerWidth = 240;
 
 const handleLogout = () => {
-    console.log('Logout!');
+    cookie.deleteCookie('token');
     window.location.replace('/login');
 }
 
@@ -79,7 +80,7 @@ const Layout = ({ children, title }, props) => {
     return (
         <>
             <Head>
-                <title>{title} - ระบบจัดการ S-WALLET</title>
+                <title>{`${title} - ระบบจัดการ S-WALLET`}</title>
             </Head>
             <Box sx={{ display: 'flex' }}>
                 <CssBaseline />

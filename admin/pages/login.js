@@ -2,12 +2,21 @@ import Head from "next/head";
 import TextField from '@mui/material/TextField';
 import { Button } from "@mui/material";
 import LoginIcon from '@mui/icons-material/Login';
+import * as cookie from 'cookies-next';
+import dayjs from "dayjs";
 
 import { useForm } from "react-hook-form";
 
 const Login = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
+        cookie.setCookie(
+            'token', 
+            `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c`,
+            {
+                expires: new Date(dayjs().add(1, 'hour'))
+            }
+        );
         window.location.replace('/');
     }
 
