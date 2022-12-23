@@ -11,7 +11,6 @@ const Profile = () => {
     try {
       console.log(accountId, walletAddress);
       const res = await axios.get(`http://localhost:8280/transaction-api/v1/transaction/log/${accountId}/${walletAddress}`, config);
-      console.log(res.data);
       setTransactions(res.data);
     } catch (error) {
       console.log(res);
