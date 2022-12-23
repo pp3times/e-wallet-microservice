@@ -17,9 +17,9 @@ public class TransactionLogController {
     @Autowired
     TransactionService transactionService;
 
-    @GetMapping("/log/{accountId}")
-    public List<TransactionDto> getTransactionLog(@PathVariable("accountId") Long accountNo){
-        List<TransactionDto> transactionDtoList = transactionService.getTransaction(accountNo);
+    @GetMapping("/log/{accountId}/{walletAddress}")
+    public List<TransactionDto> getTransactionLog(@PathVariable("accountId") Long accountNo, @PathVariable("walletAddress") String walletAddress){
+        List<TransactionDto> transactionDtoList = transactionService.getTransaction(accountNo, walletAddress);
         return transactionDtoList;
     }
 }

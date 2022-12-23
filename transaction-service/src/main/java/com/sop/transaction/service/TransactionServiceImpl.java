@@ -14,8 +14,8 @@ public class TransactionServiceImpl implements TransactionService {
     @Autowired
     TransactionRepository transactionRepository;
 
-    public List<TransactionDto> getTransaction(Long accountNo){
-        List<TransactionLog> transactionLogs = transactionRepository.findByAccountNo(accountNo);
+    public List<TransactionDto> getTransaction(Long accountNo,String walletAddress){
+        List<TransactionLog> transactionLogs = transactionRepository.findByAccountNoAndWalletAddress(accountNo, walletAddress);
         return transactionLogs.stream().map(transactionLog -> mapTransactionLogToTransactionDto(transactionLog)).collect(Collectors.toList());
     }
     private TransactionDto mapTransactionLogToTransactionDto(TransactionLog t){

@@ -10,5 +10,5 @@ import java.util.Optional;
 
 @Repository
 public interface TransactionRepository extends JpaRepository<TransactionLog, Long> {
-    List<TransactionLog> findByAccountNo(Long accountNo);
+    List<TransactionLog> findByAccountNoAndWalletAddress(Long accountNo, String walletAddress);
 }
