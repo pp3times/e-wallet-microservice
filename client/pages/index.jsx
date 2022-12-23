@@ -3,7 +3,7 @@ import { Layout, Nav, BottomNavigate, CardWallet } from "../components";
 import { PaidOutlined, WalletOutlined, QueryStatsOutlined } from "@mui/icons-material";
 import Link from "next/link";
 import axios from "axios";
-import { getCookie } from "cookies-next";
+import { getCookie, setCookie } from "cookies-next";
 
 export default function SimpleBottomNavigation() {
   const [wallet, setWallet] = useState({});
@@ -16,7 +16,7 @@ export default function SimpleBottomNavigation() {
       console.log(res.data);
       setTransaction(res.data);
     } catch (error) {
-      console.log(res);
+      console.log(error);
     }
   };
 
@@ -29,6 +29,7 @@ export default function SimpleBottomNavigation() {
       };
       const resWallet = await axios.get(`http://localhost:8282/account-api/v1/wallet/wallet/${account.accountId}`, config);
       setWallet(resWallet.data);
+      setCookie('wallet', resWallet.data)
       getLogTransaction(account.accountNo, resWallet.data.walletAddress, config);
     } catch (error) {
       console.log(error);

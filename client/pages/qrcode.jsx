@@ -4,6 +4,7 @@ import { Layout } from "../components";
 import { Html5Qrcode } from "html5-qrcode"
 import { useEffect, useRef, useState } from "react";
 import { useQRCode } from 'next-qrcode';
+import { getCookie } from 'cookies-next';
 
 const Scanner = () => {
   const cameraRef = useRef(false);
@@ -15,7 +16,17 @@ const Scanner = () => {
 
     const html5QrCode = new Html5Qrcode("reader");
     const qrCodeSuccessCallback = (decodedText, decodedResult) => {
-      /* handle success */
+      html5QrCode.stop()
+        .then((ignore) => {
+          const data = JSON.parse(decodedText);
+          /** Wallet Address is here */
+          console.log(data.walletAddress);
+
+          /** Todo */
+        })
+        .catch((err) => {
+          console.log("Error", err.message);
+        });
     };
     const config = { fps: 10, qrbox: { width: 250, height: 250 }, aspectRatio: 1.0 };
     html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback);
@@ -30,19 +41,41 @@ const Scanner = () => {
   );
 }
 
+const MyQrCode = () => {
+  const { Image } = useQRCode();
+  const [account, setAccount] = useState({});
+  const [wallet, setWallet] = useState({});
+
+  useEffect(() => {
+    setAccount(JSON.parse(getCookie('account')));
+    setWallet(JSON.parse(getCookie('wallet')))
+
+    console.log(wallet);
+  }, []);
+
+  return (
+    <div className="w-full">
+      <div className="bg-primary p-4 text-white text-center rounded-t-xl">S-WALLET QR</div>
+      <div className="bg-white text-center text-black p-4">
+        <Image text={`{"walletAddress":"${wallet?.walletAddress}"}`} options={{ type: 'image/jpeg', width: 1200 }} />
+        <div className="space-y-1 text-sm">
+          <p className="text-primary font-bold">Scan QR to transfer to account</p>
+          <p>Name: {account?.firstName} {account?.lastName}</p>
+          <p>Wallet Address: {wallet?.walletAddress}</p>
+        </div>
+      </div>
+      <div className="flex gap-4 bg-white rounded-b-xl p-4 text-black justify-center items-center border-t-2 border-primary">
+        <img src="./logo.svg" className="h-8" alt="" />
+      </div>
+    </div>
+  );
+}
+
 const Qrcode = () => {
   const [mode, setMode] = useState('pay');
   const changeMode = (mode) => {
     setMode(mode);
   }
-
-  const firstname = 'Thanawat';
-  const lastname = 'Jantawong';
-  const walletAddress = '123-456-7890';
-  const refID = '1234567890';
-
-  const { Image } = useQRCode();
-  const qrCodeData = `{"refId":1234567890}`;
 
   return (
     <Layout title={'QR Code'}>
@@ -63,22 +96,7 @@ const Qrcode = () => {
               mode === 'pay'
                 ? <Scanner />
                 : (
-                  <div className="w-full">
-                    <div className="bg-primary p-4 text-white text-center rounded-t-xl">S-WALLET QR</div>
-                    <div className="bg-white text-center text-black p-4">
-                      <Image text={qrCodeData} options={{ type: 'image/jpeg', width: 1200 }} />
-                      <div className="space-y-1 text-sm">
-                        <p className="text-primary font-bold">Scan QR to transfer to account</p>
-                        <p>Name: {firstname} {lastname}</p>
-                        <p>Wallet Address: {walletAddress}</p>
-                        <p className="opacity-50">Ref ID: {refID}</p>
-                      </div>
-                    </div>
-                    <div className="flex gap-4 bg-white rounded-b-xl p-4 text-black justify-center items-center border-t-2 border-primary">
-                      <img src="./logo.svg" className="h-8" alt="" />
-                      <p className="text-xs">Accepts all banks | รับเงินได้จากทุกบัญชี</p>
-                    </div>
-                  </div>
+                  <MyQrCode />
                 )
             }
           </div>
