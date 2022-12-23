@@ -5,91 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44039f90-d7f5-4350-babf-7ce9b09561a4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/qrcode.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/qrcode.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/annotations.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/annotations.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/auth.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/auth.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/backend.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/backend.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/billing.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/billing.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/client.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/client.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/config_change.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/config_change.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/consumer.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/consumer.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/context.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/context.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/control.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/control.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/distribution.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/distribution.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/documentation.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/documentation.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/endpoint.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/endpoint.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/error_reason.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/error_reason.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/field_behavior.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/field_behavior.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/http.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/http.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/httpbody.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/httpbody.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/label.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/label.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/launch_stage.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/launch_stage.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/log.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/log.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/logging.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/logging.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/metric.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/metric.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/monitored_resource.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/monitored_resource.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/monitoring.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/monitoring.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/quota.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/quota.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/resource.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/resource.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/routing.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/routing.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/service.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/service.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/source_info.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/source_info.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/system_parameter.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/system_parameter.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/usage.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/usage.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/visibility.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/api/visibility.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/cloud/audit/audit_log.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/cloud/audit/audit_log.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/cloud/extended_operations.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/cloud/extended_operations.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/geo/type/viewport.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/geo/type/viewport.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/logging/type/http_request.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/logging/type/http_request.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/logging/type/log_severity.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/logging/type/log_severity.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/longrunning/operations.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/longrunning/operations.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/any.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/any.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/api.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/api.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/compiler/plugin.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/compiler/plugin.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/descriptor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/descriptor.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/duration.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/duration.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/empty.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/empty.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/field_mask.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/field_mask.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/source_context.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/source_context.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/struct.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/struct.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/timestamp.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/timestamp.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/type.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/type.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/wrappers.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/protobuf/wrappers.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/rpc/code.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/rpc/code.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/rpc/context/attribute_context.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/rpc/context/attribute_context.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/rpc/error_details.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/rpc/error_details.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/rpc/status.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/rpc/status.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/calendar_period.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/calendar_period.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/color.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/color.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/date.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/date.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/datetime.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/datetime.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/dayofweek.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/dayofweek.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/decimal.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/decimal.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/expr.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/expr.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/fraction.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/fraction.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/interval.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/interval.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/latlng.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/latlng.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/localized_text.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/localized_text.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/money.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/money.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/month.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/month.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/phone_number.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/phone_number.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/postal_address.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/postal_address.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/quaternion.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/quaternion.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/timeofday.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/google/type/timeofday.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/grpc/binlog/v1/binarylog.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/grpc/binlog/v1/binarylog.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/grpc/channelz/v1/channelz.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/grpc/channelz/v1/channelz.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/grpc/health/v1/health.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/grpc/health/v1/health.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/grpc/reflection/v1alpha/reflection.proto" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/extracted-include-protos/main/grpc/reflection/v1alpha/reflection.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/generated/source/proto/main/grpc/com/proto/payment/PaymentServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/generated/source/proto/main/grpc/com/proto/payment/PaymentServiceGrpc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/generated/source/proto/main/java/com/proto/payment/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/generated/source/proto/main/java/com/proto/payment/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/generated/source/proto/main/java/com/proto/payment/PaymentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/generated/source/proto/main/java/com/proto/payment/PaymentRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/generated/source/proto/main/java/com/proto/payment/PaymentRequestOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/generated/source/proto/main/java/com/proto/payment/PaymentRequestOrBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/generated/source/proto/main/java/com/proto/payment/PaymentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/generated/source/proto/main/java/com/proto/payment/PaymentResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/generated/source/proto/main/java/com/proto/payment/PaymentResponseOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/generated/source/proto/main/java/com/proto/payment/PaymentResponseOrBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/api/create-payment-intent.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/api/create-payment-intent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/topup/topupInput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/topup/topupInput.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,20 +43,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/projects/e-wallet",
-    "nodejs_package_manager_path": "pnpm",
-    "spring.configuration.checksum": "b1694b4b84afb9b4285c62e39fd48462"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projects/e-wallet&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;b1694b4b84afb9b4285c62e39fd48462&quot;
   }
-}]]></component>
+}</component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -145,7 +64,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.MicroEurekaServerApplication">
     <configuration name="AuthorizationServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="auth-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sop.auth.AuthorizationServerApplication" />
@@ -214,7 +133,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.StripeServiceApplication" />
         <item itemvalue="Spring Boot.MicroTransactionServiceApplication" />
         <item itemvalue="Spring Boot.MicroNotificationServiceApplication" />
         <item itemvalue="Spring Boot.MicroAccountServiceApplication" />
