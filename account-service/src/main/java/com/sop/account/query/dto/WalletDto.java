@@ -14,4 +14,6 @@ public class WalletDto implements Serializable {
 
     private Double walletBalance;
 
+
+
 }

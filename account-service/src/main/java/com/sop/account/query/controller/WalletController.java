@@ -12,9 +12,9 @@ public class WalletController {
     @Autowired
     WalletService walletService;
 
-    @GetMapping("wallet/{walletAddress}")
-    public WalletDto getWallet(@PathVariable("walletAddress") String walletAddress){
-        WalletDto walletDto = walletService.getWallet(walletAddress);
+    @GetMapping("wallet/{walletId}")
+    public WalletDto getWallet(@PathVariable("walletId") Long walletId){
+        WalletDto walletDto = walletService.getWallet(walletId);
         return walletDto;
     }
 
