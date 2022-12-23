@@ -24,16 +24,16 @@ const Singin = () => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post(`http://localhost:9191/auth-api/v1/auth/signin`, data);
+      const res = await axios.post(`http://localhost:9191/auth-api/v1/auth/signin/`, data);
       console.log(res.data);
-      setCookie("user", JSON.stringify(res.data));
+      setCookie("user", res.data);
       router.push("/");
     } catch (error) {
       console.log(errors);
       setAlert(error.response?.data?.message || error.message);
     }
   };
-  
+
   return (
     <Layout title="เข้าสู่ระบบ">
       <svg className="fill-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

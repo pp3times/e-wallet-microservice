@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 const Profile = () => {
   const [profile, setProfile] = useState({});
+  const [account, setAccount] = useState()
 
   const fetchData = async () => {
     try {
@@ -14,8 +15,8 @@ const Profile = () => {
   };
 
   useEffect(() => {
-    setProfile(getCookie("user"));
-    console.log(profile);
+    setProfile(JSON.parse(getCookie("user")));
+    
   }, []);
   return (
     <Layout title="โปร์ไฟล์">
@@ -25,7 +26,7 @@ const Profile = () => {
         <div className="relative rounded-lg shadow-xl flex flex-col items-center w-full mt-4">
           <div className=" bg-gradient-to-br from-primary to-[#024422] p-10 rounded-md w-full flex items-start">
             <div className="flex flex-col items-center justify-between w-full gap-y-5  text-white">
-              <p className="font-bold">สวัสดี, คุณพิสิฐไชย</p>
+              <p className="font-bold">สวัสดี, {profile?.username}</p>
               <p className="font-bold text-sm">ยอดเงินคงเหลือ</p>
               <p className="text-3xl font-bold">150,00.49 บาท</p>
               <p className="font-bold text-sm">บัญชี 123-456-7890</p>

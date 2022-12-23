@@ -63,7 +63,7 @@ public class AuthController {
                 .map(item -> item.getAuthority())
                 .collect(Collectors.toList());
 //        String userEmail = userDetails.getEmail();
-        rabbitTemplate.convertAndSend("MailDirectExchange","sendMail",userDetails);
+//        rabbitTemplate.convertAndSend("MailDirectExchange","sendMail",userDetails);
 
         return ResponseEntity.ok(new JwtResponse(jwt,
                 userDetails.getId(),

@@ -3,20 +3,25 @@ import { WalletOutlined, ImportExportOutlined } from "@mui/icons-material";
 import axios from "axios";
 import { getCookie } from "cookies-next";
 
-
-const AcceptModal = ({ open, setOpen, amount, goal }) => {
+const AcceptModalExchange = ({ open, setOpen, amount, goal }) => {
   const handleClose = () => {
     setOpen(false);
   };
 
-  const handleSubmit = async() => {
+  const handleSubmit = async () => {
     try {
-      
+      // const data = {
+      //   amount: "amount to fund",
+      //   estinationWalletAddress: "wallet address to credit",
+      //   sourceWalletAddress: "wallet address to debit"
+      // }
+      // const resTransaction = await axios("")
+      // const resStripe = await axios("http://localhost:8280/")
     } catch (error) {
-      
+      console.log(error);
     }
-  }
-  
+  };
+
   return (
     <Modal
       className="flex items-center justify-center"
@@ -46,11 +51,13 @@ const AcceptModal = ({ open, setOpen, amount, goal }) => {
           >
             ยกเลิก
           </button>
-          <button onClick={handleSubmit} className="bg-primary px-5 py-2 rounded-md text-white">ยืนยัน</button>
+          <button onClick={handleSubmit} className="bg-primary px-5 py-2 rounded-md text-white">
+            ยืนยัน
+          </button>
         </div>
       </Box>
     </Modal>
   );
 };
 
-export default AcceptModal;
+export default AcceptModalExchange;

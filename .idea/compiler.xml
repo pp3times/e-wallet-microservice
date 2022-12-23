@@ -10,8 +10,8 @@
         <module name="eureka-service" />
         <module name="auth-service" />
         <module name="transaction-service (2)" />
-        <module name="gateway-service" />
         <module name="stripe-service" />
+        <module name="gateway-service" />
         <module name="transaction-service" />
         <module name="micro-payment-grpc" />
         <module name="Transaction-Service" />
@@ -23,9 +23,14 @@
     <bytecodeTargetLevel>
       <module name="account-service (1)" target="11" />
       <module name="demo" target="17" />
+      <module name="micro-account-service" target="11" />
+      <module name="micro-auth-service" target="11" />
+      <module name="micro-eureka-service" target="11" />
       <module name="micro-grpc-service" target="17" />
+      <module name="micro-notification-service" target="11" />
       <module name="micro-payment-grpc" target="17" />
       <module name="micro-payment-gRPC" target="17" />
+      <module name="Micro-Transaction-Service" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

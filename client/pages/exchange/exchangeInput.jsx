@@ -1,11 +1,13 @@
-import { AcceptModal, Layout } from "../../components";
+import { AcceptModalExchange, Layout } from "../../components";
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowBackIos } from "@mui/icons-material";
 import { TextField } from "@mui/material";
 import { useForm, Controller } from "react-hook-form";
+import axios from "axios";
+import { getCookie } from "cookies-next";
 
-const TopupInput = () => {
+const ExchangeInput = () => {
   const [open, setOpen] = useState(false);
 
   const {
@@ -21,17 +23,15 @@ const TopupInput = () => {
 
   const onSubmit = async (data) => {
     try {
-      console.log(data);
       setOpen(true);
     } catch (error) {
       console.log(errors);
-      //   setAlert(error.response?.data?.message || error.message);
     }
   };
 
   return (
     <Layout title="กรอกข้อมูล">
-      <AcceptModal open={open} setOpen={setOpen} amount={watch("amount")} goal={watch("goal")} />
+      <AcceptModalExchange open={open} setOpen={setOpen} amount={watch("amount")} goal={watch("goal")} />
       <div className="bg-primary h-screen w-full pt-5 text-white flex flex-col">
         <div className="flex items-center w-full px-5">
           <Link href="/">
@@ -80,4 +80,4 @@ const TopupInput = () => {
   );
 };
 
-export default TopupInput;
+export default ExchangeInput;
