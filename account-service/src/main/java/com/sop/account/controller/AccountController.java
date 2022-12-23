@@ -1,7 +1,7 @@
 package com.sop.account.controller;
 
 
-import com.sop.account.dto.AccountDto;
+import com.sop.account.query.dto.AccountDto;
 import com.sop.account.dto.AccountRequestDto;
 import com.sop.account.service.AccountService;
 import io.swagger.annotations.*;
