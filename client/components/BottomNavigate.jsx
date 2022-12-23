@@ -35,7 +35,7 @@ const BottomNavigate = () => {
       <div className=" bg-primary h-16 min-w-[121px] absolute bottom-0 z-0"></div>
 
       <div className=" bg-primary h-20 min-w-[147px] absolute right-0 rounded-tl-2xl flex justify-center gap-x-10 items-center z-10 text-white">
-        <Link href="" className="flex flex-col items-center ">
+        <Link href="/service" className="flex flex-col items-center ">
           <GridViewOutlined className={"text-3xl duration-300 " + (status["/service"] && "rounded-full bg-white/20 w-10 h-10")} />
           <p className="text-sm">บริการ</p>
         </Link>
