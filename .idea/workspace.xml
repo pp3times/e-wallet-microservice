@@ -145,7 +145,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MicroTransactionServiceApplication">
+  <component name="RunManager">
     <configuration name="AuthorizationServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="auth-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sop.auth.AuthorizationServerApplication" />
@@ -205,19 +205,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sop.transaction.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StripeServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="stripe-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.stripeservice.StripeServiceApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.stripeservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

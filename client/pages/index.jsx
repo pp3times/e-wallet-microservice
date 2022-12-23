@@ -11,9 +11,7 @@ export default function SimpleBottomNavigation() {
 
   const getLogTransaction = async (accountId, walletAddress, config) => {
     try {
-      console.log(accountId, walletAddress);
       const res = await axios.get(`http://localhost:8280/transaction-api/v1/transaction/log/${accountId}/${walletAddress}`, config);
-      console.log(res.data);
       setTransaction(res.data);
     } catch (error) {
       console.log(error);
