@@ -5,33 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bf6c669-fa0c-49f6-bfb0-3d7d5feec01e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account-service/src/main/java/com/sop/account/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/java/com/sop/account/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-service/src/main/java/com/sop/account/query/controller/WalletController.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/java/com/sop/account/query/controller/WalletController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account-service/target/classes/com/sop/account/controller/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/target/classes/com/sop/account/controller/AccountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/sop/auth/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sop/auth/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/target/classes/com/sop/auth/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/target/classes/com/sop/auth/controller/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/AcceptModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/AcceptModal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/exchange/exchangeInput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/exchange/exchangeInput.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/sop/notification/controller/NotificationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/sop/notification/controller/NotificationsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/target/classes/com/sop/notification/controller/NotificationsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/target/classes/com/sop/notification/controller/NotificationsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stripe-service/src/main/java/com/example/stripeservice/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/stripe-service/src/main/java/com/example/stripeservice/controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stripe-service/src/main/java/com/example/stripeservice/controller/StripeWebHookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/stripe-service/src/main/java/com/example/stripeservice/controller/StripeWebHookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/components/Accounts/AddAccount.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/admin/components/Accounts/AddAccount.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/components/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/components/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/components/Dashboard/Topup.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/admin/components/Dashboard/Topup.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pages/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pages/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/sop/transaction/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/sop/transaction/controller/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/sop/transaction/query/controller/TransactionLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/sop/transaction/query/controller/TransactionLogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/transaction-service/target/classes/com/sop/transaction/controller/TransactionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/target/classes/com/sop/transaction/controller/TransactionController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,13 +62,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/thun/Desktop/e-wallet-microservice",
+    "last_opened_file_path": "C:/projects/e-wallet-microservice",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "2b7dfb7f36623fb4b51d2737522cb1e2"
+    "spring.configuration.checksum": "81ebfaf6991d870a0ef557fa86aabd4c"
   }
 }]]></component>
   <component name="RunDashboard">
@@ -189,10 +172,7 @@
       <workItem from="1671714646964" duration="1735000" />
       <workItem from="1671726419282" duration="2004000" />
       <workItem from="1671732624856" duration="1403000" />
-      <workItem from="1671760222431" duration="1196000" />
-      <workItem from="1671761671926" duration="211000" />
-      <workItem from="1671761892635" duration="1124000" />
-      <workItem from="1671763063049" duration="3180000" />
+      <workItem from="1671760222431" duration="4149000" />
     </task>
     <servers />
   </component>

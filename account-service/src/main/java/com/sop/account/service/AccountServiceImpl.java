@@ -1,5 +1,6 @@
 package com.sop.account.service;
 
+import com.sop.account.query.dto.AccountDto;
 import com.sop.account.dto.WalletResponseDto;
 import com.sop.account.model.Account;
 import com.sop.account.model.Wallet;
@@ -140,6 +141,22 @@ public class AccountServiceImpl implements AccountService{
         dto.setWalletBalance(data.getWalletBalance());
         dto.setWalletId(data.getWalletId());
         return dto;
+    }
+
+
+    @Override
+    public AccountDto getAccount(Long accountId){
+        Account account = accountRepository.findByAccountId(accountId);
+        AccountDto accountDto = new AccountDto();
+
+        accountDto.setAccountId(account.getAccountId());
+        accountDto.setSurname(account.getSurname());
+        accountDto.setFirstName(account.getFirstName());
+        accountDto.setLastName(account.getLastName());
+        accountDto.setEmail(account.getEmail());
+        accountDto.setPhone(account.getPhone());
+        accountDto.setAccountNo(account.getAccountNo());
+        return accountDto;
     }
 
 }
