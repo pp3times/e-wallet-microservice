@@ -1,6 +1,6 @@
-package com.sop.account.controller;
+package com.sop.account.query.controller;
 
-import com.sop.account.dto.WalletDto;
+import com.sop.account.query.dto.WalletDto;
 import com.sop.account.service.WalletService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

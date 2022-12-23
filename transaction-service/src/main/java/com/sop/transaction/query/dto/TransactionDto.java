@@ -1,4 +1,4 @@
-package com.sop.transaction.dto;
+package com.sop.transaction.query.dto;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
 package com.sop.account.service;
 
-import com.sop.account.dto.WalletDto;
+import com.sop.account.query.dto.WalletDto;
 import com.sop.account.model.Wallet;
 import com.sop.account.repository.WalletRepository;
 import org.springframework.beans.factory.annotation.Autowired;

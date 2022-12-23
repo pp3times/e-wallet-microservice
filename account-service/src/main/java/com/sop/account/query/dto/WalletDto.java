@@ -1,4 +1,4 @@
-package com.sop.account.dto;
+package com.sop.account.query.dto;
 
 import lombok.Data;
 

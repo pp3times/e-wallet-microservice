@@ -1,13 +1,12 @@
 package com.sop.transaction.service;
 
-import com.sop.transaction.dto.TransactionDto;
+import com.sop.transaction.query.dto.TransactionDto;
 import com.sop.transaction.model.TransactionLog;
 import com.sop.transaction.repository.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service

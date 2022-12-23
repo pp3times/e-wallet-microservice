@@ -3,9 +3,7 @@ package com.sop.account.controller;
 
 import com.sop.account.dto.AccountDto;
 import com.sop.account.dto.AccountRequestDto;
-import com.sop.account.dto.WalletDto;
 import com.sop.account.service.AccountService;
-import com.sop.account.service.WalletService;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
