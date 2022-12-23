@@ -6,6 +6,9 @@ import com.sop.account.repository.WalletRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class WalletServiceImpl implements WalletService{
     @Autowired
@@ -18,6 +21,19 @@ public class WalletServiceImpl implements WalletService{
         walletDto.setWalletId(wallet.getWalletId());
         walletDto.setWalletAddress(wallet.getWalletAddress());
         walletDto.setWalletBalance(wallet.getWalletBalance());
+        return walletDto;
+    }
+
+    @Override
+    public List<WalletDto> getAllWallet(){
+        List<Wallet> wallets = walletRepository.findAll();
+        return wallets.stream().map(wallet -> mapWalletToWalletDto(wallet)).collect(Collectors.toList());
+    }
+    private WalletDto mapWalletToWalletDto(Wallet t){
+        WalletDto walletDto = new WalletDto();
+        walletDto.setWalletId(t.getWalletId());
+        walletDto.setWalletAddress(t.getWalletAddress());
+        walletDto.setWalletBalance(t.getWalletBalance());
         return walletDto;
     }
 }
