@@ -7,6 +7,8 @@ message PaymentRequest {
   string currency = 1;
   int32 amount = 2;
   string payment_intent = 3;
+  string payment_intent_client_secret = 4;
+  string redirect_status = 5;
 }
 
 message PaymentResponse {
