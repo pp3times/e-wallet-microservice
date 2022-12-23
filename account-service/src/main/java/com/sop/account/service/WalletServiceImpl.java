@@ -12,8 +12,8 @@ public class WalletServiceImpl implements WalletService{
     WalletRepository walletRepository;
 
     @Override
-    public WalletDto getWallet(String walletAddress){
-        Wallet wallet = walletRepository.findByWalletAddress(walletAddress);
+    public WalletDto getWallet(Long walletId){
+        Wallet wallet = walletRepository.findByWalletId(walletId);
         WalletDto walletDto = new WalletDto();
         walletDto.setWalletId(wallet.getWalletId());
         walletDto.setWalletAddress(wallet.getWalletAddress());
