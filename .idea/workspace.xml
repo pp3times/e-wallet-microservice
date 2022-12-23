@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3bf6c669-fa0c-49f6-bfb0-3d7d5feec01e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
@@ -92,6 +93,20 @@
       <change beforePath="$PROJECT_DIR$/micro-grpc/build/generated/source/proto/main/java/com/proto/payment/PaymentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/generated/source/proto/main/java/com/proto/payment/PaymentResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/micro-grpc/build/generated/source/proto/main/java/com/proto/payment/PaymentResponseOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/generated/source/proto/main/java/com/proto/payment/PaymentResponseOrBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/micro-grpc/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/account-service/src/main/java/com/sop/account/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/java/com/sop/account/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/src/main/java/com/sop/account/query/controller/AccountQueryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/java/com/sop/account/query/controller/AccountQueryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/target/classes/com/sop/account/controller/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/target/classes/com/sop/account/controller/AccountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/components/Accounts/AddAccount.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/admin/components/Accounts/AddAccount.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/components/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/components/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/components/Dashboard/Topup.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/admin/components/Dashboard/Topup.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pages/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pages/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/AcceptModalExchange.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/AcceptModalExchange.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/sop/transaction/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/sop/transaction/controller/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/target/classes/com/sop/transaction/controller/TransactionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/target/classes/com/sop/transaction/controller/TransactionController.class" afterDir="false" />
+>>>>>>> 57ab75d8faad4007e07f93dfe8cbc5249d352800
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +162,12 @@
     &quot;spring.configuration.checksum&quot;: &quot;81ebfaf6991d870a0ef557fa86aabd4c&quot;
   }
 }</component>
+<<<<<<< HEAD
+=======
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+>>>>>>> 57ab75d8faad4007e07f93dfe8cbc5249d352800
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>

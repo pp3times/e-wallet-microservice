@@ -26,7 +26,19 @@ const Singin = () => {
     try {
       const res = await axios.post(`http://localhost:9191/auth-api/v1/auth/signin/`, data);
       console.log(res.data);
+
+      const config = {
+        headers: { Authorization: `Bearer ${res.data.accessToken}` },
+      };
+
+      const resAccount = await axios.get(`http://localhost:8282/account-api/v1/account/info/${res.data.id}`, config);
+
+      const resWallet = await axios.get(`http://localhost:8282/account-api/v1/account/info/${resAccount.data.accountNo}`, config);
+
+      setCookie("account", resAccount.data);
       setCookie("user", res.data);
+      setCookie("wallet", resWallet.data)
+      
       router.push("/");
     } catch (error) {
       console.log(errors);
