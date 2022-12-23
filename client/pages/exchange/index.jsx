@@ -24,10 +24,10 @@ const Exchange = () => {
           <Link href="/">
             <ArrowBackIos />
           </Link>
-          <p className="font-bold">เติมเงิน</p>
+          <p className="font-bold">โอนเงิน</p>
         </div>
         <div className="flex flex-col items-start mt-5 px-5">
-          <p className="font-bold text-sm">รายการเติมเงินล่าสุด</p>
+          <p className="font-bold text-sm">รายการโอนเงินล่าสุด</p>
           <div className="flex items-center gap-x-5 pt-4 overflow-x-auto w-full">
             {transaction.map((items, index) => {
               return (
