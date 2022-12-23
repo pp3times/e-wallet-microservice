@@ -3,17 +3,27 @@ import Link from "next/link";
 import { ArrowBackIos, WalletOutlined } from "@mui/icons-material";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { getCookie } from "cookies-next";
 
 const Exchange = () => {
-  const [transaction, setTransaction] = useState([{ status: false }, { status: false }, { status: false }, { status: false }, { status: true }]);
-  const [wallet, setWallet] = useState({})
+  const [transaction, setTransaction] = useState([]);
   const getWallet = async () => {
     try {
-      const getWallet = await axios.get(`http://localhost:8280`)
+      const user = JSON.parse(getCookie("user"));
+      const wallet = JSON.parse(getCookie("wallet"));
+      const account = JSON.parse(getCookie("account"));
+      const config = {
+        headers: { Authorization: `Bearer ${user.accessToken}` },
+      };
+
+      const res = await axios.get(`http://localhost:8280/transaction-api/v1/transaction/log/${account.accountNo}/${wallet.walletAddress}`, config);
+      console.log(res.data)
+      setTransaction(res.data)
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   };
+
   useEffect(() => {
     getWallet();
   }, []);
@@ -34,14 +44,14 @@ const Exchange = () => {
                 <div key={index} className="flex flex-col items-center flex-none">
                   <div
                     className={
-                      "border-4 rounded-full w-16 h-16 flex items-center justify-center font-extrabold text-xl " +
-                      (items.status == false && "bg-error")
+                      "border-4 rounded-full w-20 h-20 flex items-center justify-center font-extrabold text-xs " +
+                      (items.transactionType == "WITHDRAWAL" && "bg-error")
                     }
                   >
-                    {items.status == false ? "-500" : "+500"}
+                    {items.amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </div>
-                  <p className="text-xs mt-2">{items.status == false ? "โอนเงินออก" : "รับเงินเข้า"}</p>
-                  <p className="text-[10px]">{items.status == false ? "จากบัญชี" : "เข้าบัญขี"} 123-456-7890</p>
+                  <p className="text-xs mt-2">{items.transactionType == "WITHDRAWAL" ? "โอนเงินออก" : "รับเงินเข้า"}</p>
+                  <p className="text-[10px]">{items.transactionType == "WITHDRAWAL" ? "จากบัญชี" : "เข้าบัญขี"} {items.accountNo}</p>
                 </div>
               );
             })}

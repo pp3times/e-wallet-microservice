@@ -17,10 +17,10 @@ const BottomNavigate = () => {
   return (
     <footer className="fixed bottom-0 min-w-[390px] flex items-center justify-center h-20">
       <div className="mx-auto bg-white rounded-3xl absolute -top-14 h-24 w-24 flex items-center justify-center z-10">
-        <button className="bg-primary w-20 h-20 rounded-2xl flex flex-col items-center justify-center text-white">
+        <Link href="/qrcode" className="bg-primary w-20 h-20 rounded-2xl flex flex-col items-center justify-center text-white">
           <QrCodeScanner className="text-4xl" />
           แสกน
-        </button>
+        </Link>
       </div>
       <div className=" bg-primary h-20 min-w-[147px] absolute left-0 rounded-tr-2xl flex justify-center gap-x-10 items-center z-10 text-white">
         <Link href="/" className="flex flex-col items-center ">

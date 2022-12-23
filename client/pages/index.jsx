@@ -1,40 +1,67 @@
-import { useState } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { Layout, Nav, BottomNavigate, CardWallet } from "../components";
 import { PaidOutlined, WalletOutlined, QueryStatsOutlined } from "@mui/icons-material";
 import Link from "next/link";
+import axios from "axios";
+import { getCookie } from "cookies-next";
 
 export default function SimpleBottomNavigation() {
-  const [transaction, setTransaction] = useState([
-    { status: true },
-    { status: true },
-    { status: true },
-    { status: true },
-    { status: true },
-    { status: true },
-  ]);
+  const [wallet, setWallet] = useState({});
+  const [transaction, setTransaction] = useState([]);
+
+  const getLogTransaction = async (accountId, walletAddress, config) => {
+    try {
+      console.log(accountId, walletAddress);
+      const res = await axios.get(`http://localhost:8280/transaction-api/v1/transaction/log/${accountId}/${walletAddress}`, config);
+      console.log(res.data);
+      setTransaction(res.data);
+    } catch (error) {
+      console.log(res);
+    }
+  };
+
+  const getWallet = async () => {
+    try {
+      const user = JSON.parse(getCookie("user"));
+      const account = JSON.parse(getCookie("account"));
+      const config = {
+        headers: { Authorization: `Bearer ${user.accessToken}` },
+      };
+      const resWallet = await axios.get(`http://localhost:8282/account-api/v1/wallet/wallet/${account.accountId}`, config);
+      setWallet(resWallet.data);
+      getLogTransaction(account.accountNo, resWallet.data.walletAddress, config);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getWallet();
+  }, []);
 
   return (
     <Layout title={"หน้าแรก"}>
       <Nav />
       <section className="flex-grow w-full mt-5">
-        <CardWallet />
-        <div className="w-full flex flex-col justify-center px-3 py-5 mt-5">
+        <CardWallet amount={wallet.walletBalance} account={wallet.walletAddress} />
+        <div className="w-full flex flex-col justify-center px-3 py-5">
           <hr className="border-zinc-300" />
           <p className="w-full text-left mt-5 font-bold text-sm">การทำรายการล่าสุด</p>
           <div className="w-full flex pt-4 gap-x-5 overflow-x-auto">
             {transaction.map((items, index) => {
+              const money = items.amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
               return (
                 <div key={index} className="flex flex-col items-center flex-none">
                   <div
                     className={
-                      "border-2 rounded-full w-16 h-16  flex items-center justify-center font-extrabold  text-xl " +
-                      (items.status ? "bg-primary/20 text-primary" : "bg-error/20 text-error")
+                      "border-2 rounded-full w-20 h-20  flex items-center justify-center font-extrabold text-xs " +
+                      (items.transactionType != "WITHDRAWAL" ? "bg-primary/20 text-primary" : "bg-error/20 text-error")
                     }
                   >
-                    +500
+                    {money}
                   </div>
-                  <p className="text-xs mt-2">รับเงินจาก</p>
-                  <p className="text-xs">123-456-7890</p>
+                  <p className="text-xs mt-2">{items.transactionType == "WITHDRAWAL" ? "ถอนเงินจาก" : "รับเงินจาก"}</p>
+                  <p className="text-xs text-center">{items.accountNo}</p>
                 </div>
               );
             })}

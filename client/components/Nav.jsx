@@ -19,6 +19,7 @@ function ResponsiveAppBar() {
 
   const handleLogout = () => {
     deleteCookie("user");
+    deleteCookie("account")
     router.push("/login");
   };
 

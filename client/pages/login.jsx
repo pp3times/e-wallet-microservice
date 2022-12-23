@@ -25,25 +25,19 @@ const Singin = () => {
   const onSubmit = async (data) => {
     try {
       const res = await axios.post(`http://localhost:9191/auth-api/v1/auth/signin/`, data);
-
       const config = {
         headers: { Authorization: `Bearer ${res.data.accessToken}` },
       };
-
       const resAccount = await axios.get(`http://localhost:8282/account-api/v1/account/info/${res.data.id}`, config);
-
-      const resWallet = await axios.get(`http://localhost:8282/account-api/v1/wallet/wallet/${resAccount.data.accountId}`, config);
-
-      setCookie("account", resAccount.data);
       setCookie("user", res.data);
-      setCookie("wallet", resWallet.data);
-
+      setCookie("account", resAccount.data);
       router.push("/");
     } catch (error) {
       console.log(errors);
       setAlert(error.response?.data?.message || error.message);
     }
   };
+
 
   return (
     <Layout title="เข้าสู่ระบบ">

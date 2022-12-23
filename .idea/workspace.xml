@@ -6,18 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="44039f90-d7f5-4350-babf-7ce9b09561a4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-service/target/classes/com/sop/account/repository/WalletRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/target/classes/com/sop/account/repository/WalletRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/AcceptModalExchange.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/AcceptModalExchange.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/CardWallet.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/CardWallet.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Nav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/exchange/exchangeInput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/exchange/exchangeInput.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/exchange/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/exchange/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/target/classes/com/ewal/gatewayservice/GatewayServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/target/classes/com/ewal/gatewayservice/GatewayServiceApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro-grpc/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/micro-grpc/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/sop/transaction/query/controller/TransactionLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/sop/transaction/query/controller/TransactionLogController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +148,7 @@
       <updated>1671772001469</updated>
       <workItem from="1671772002915" duration="76000" />
       <workItem from="1671772087114" duration="361000" />
-      <workItem from="1671772482624" duration="2025000" />
+      <workItem from="1671772482624" duration="5299000" />
     </task>
     <servers />
   </component>
