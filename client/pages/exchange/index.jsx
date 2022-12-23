@@ -9,7 +9,7 @@ const Exchange = () => {
   const [wallet, setWallet] = useState({})
   const getWallet = async () => {
     try {
-      const getWallet = await axios.get(`http://localhost:8282`)
+      const getWallet = await axios.get(`http://localhost:8280`)
     } catch (error) {
       console.log(error)
     }

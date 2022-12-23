@@ -16,7 +16,7 @@ const Profile = () => {
 
   useEffect(() => {
     setProfile(JSON.parse(getCookie("user")));
-    
+    setAccount(JSON.parse(getCookie("wallet")))
   }, []);
   return (
     <Layout title="โปร์ไฟล์">
@@ -28,8 +28,8 @@ const Profile = () => {
             <div className="flex flex-col items-center justify-between w-full gap-y-5  text-white">
               <p className="font-bold">สวัสดี, {profile?.username}</p>
               <p className="font-bold text-sm">ยอดเงินคงเหลือ</p>
-              <p className="text-3xl font-bold">150,00.49 บาท</p>
-              <p className="font-bold text-sm">บัญชี 123-456-7890</p>
+              <p className="text-3xl font-bold">{account?.walletBalance} บาท</p>
+              <p className="font-bold text-sm text-center">หมายเลขบัญชี <span className="block">{account?.walletAddress}</span></p>
             </div>
             <svg className="absolute right-0" width="124" height="142" viewBox="0 0 124 142" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M64.0823 -43.4655L225.937 74.6562L0.628193 146.596L64.0823 -43.4655Z" fill="#27D97B" fillOpacity="0.1" />
