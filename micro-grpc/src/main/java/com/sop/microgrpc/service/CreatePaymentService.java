@@ -32,6 +32,7 @@ public class CreatePaymentService {
             Map<String, Object> params = new HashMap<>();
             params.put("amount", amount);
             params.put("currency", request.getCurrency());
+            params.put("paymentIntent", request.getPaymentIntent());
             params.put(
                     "payment_method_types",
                     paymentMethodTypes
