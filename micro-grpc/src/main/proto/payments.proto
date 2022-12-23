@@ -1,0 +1,17 @@
+syntax = "proto3";
+package payments;
+option java_package = "com.proto.payments";
+option java_multiple_files = true;
+
+message PaymentRequest {
+  string currency = 1;
+  int32 amount = 2;
+}
+
+message PaymentResponse {
+  string clientSecret = 1;
+  string status = 2;
+}
+service PaymentService {
+  rpc CreatePayment (PaymentRequest) returns (PaymentResponse) {}
+}

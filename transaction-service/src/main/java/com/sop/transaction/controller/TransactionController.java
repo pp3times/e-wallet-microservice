@@ -2,6 +2,8 @@ package com.sop.transaction.controller;
 
 
 //import com.sop.transaction.dto.*;
+import com.sop.transaction.query.dto.TransactionDto;
+import com.sop.transaction.service.TransactionService;
 import com.sop.transaction.service.WalletService;
 import com.sop.transaction.dto.*;
 import io.swagger.annotations.ApiImplicitParam;
@@ -13,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/v1/wallet")
@@ -22,6 +25,8 @@ public class TransactionController {
     @Autowired
     WalletService walletService;
 
+//    @Autowired
+//    TransactionService transactionService;
     @PostMapping("/fund")
     @ApiOperation(value = "Fund Wallet",notes = "Add funds to wallet account")
     @ApiImplicitParam(name = "Authorization", value = "Access Token", required = true, paramType = "header")
@@ -61,5 +66,15 @@ public class TransactionController {
         return ResponseEntity.ok().body(walletService.transferToWallet(data.getAmount(), data.getSourceWalletAddress(), data.getDestinationWalletAddress()));
     }
 
+//    @GetMapping("/transactions/{accountId}")
+//    public List<TransactionDto> getTransactionLog(@PathVariable("accountId") Long accountNo){
+//        List<TransactionDto> transactionDtoList = transactionService.getTransaction(accountNo);
+//        return transactionDtoList;
+//    }
+
+//    @GetMapping("/test")
+//    public String test(){
+//        return "test";
+//    }
 
 }

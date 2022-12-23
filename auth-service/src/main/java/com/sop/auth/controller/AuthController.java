@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@CrossOrigin(origins= {"*"}, maxAge = 4800, allowCredentials = "false" )
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/v1/auth")
 public class AuthController {
@@ -63,7 +63,7 @@ public class AuthController {
                 .map(item -> item.getAuthority())
                 .collect(Collectors.toList());
 //        String userEmail = userDetails.getEmail();
-//        rabbitTemplate.convertAndSend("MailDirectExchange","sendMail",userEmail);
+        rabbitTemplate.convertAndSend("MailDirectExchange","sendMail",userDetails);
 
         return ResponseEntity.ok(new JwtResponse(jwt,
                 userDetails.getId(),
