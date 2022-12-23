@@ -1,10 +1,22 @@
 import { Layout } from "../../components";
 import Link from "next/link";
 import { ArrowBackIos, WalletOutlined } from "@mui/icons-material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const Exchange = () => {
   const [transaction, setTransaction] = useState([{ status: false }, { status: false }, { status: false }, { status: false }, { status: true }]);
+  const [wallet, setWallet] = useState({})
+  const getWallet = async () => {
+    try {
+      const getWallet = await axios.get(`http://localhost:8282`)
+    } catch (error) {
+      console.log(error)
+    }
+  };
+  useEffect(() => {
+    getWallet();
+  }, []);
   return (
     <Layout title="เติมเงิน">
       <div className="bg-primary h-screen w-full pt-5 text-white flex flex-col">
