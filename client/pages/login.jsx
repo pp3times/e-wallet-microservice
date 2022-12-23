@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useForm, Controller } from "react-hook-form";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import axios from "axios";
+import { setCookie } from "cookies-next";
 
 const Singin = () => {
   const router = useRouter();
@@ -22,7 +24,8 @@ const Singin = () => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post(`http://127.0.0.1:8000/login`, data);
+      const res = await axios.post(`http://localhost:9191/auth-api/v1/auth/signin`, data);
+      console.log(res.data);
       setCookie("user", JSON.stringify(res.data));
       router.push("/");
     } catch (error) {
@@ -30,6 +33,7 @@ const Singin = () => {
       setAlert(error.response?.data?.message || error.message);
     }
   };
+  
   return (
     <Layout title="เข้าสู่ระบบ">
       <svg className="fill-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -52,6 +56,7 @@ const Singin = () => {
         <div className="w-11/12 flex flex-col gap-y-2">
           <TextField
             color={errors.password ? "error" : "neutral"}
+            type="password"
             label="Password"
             variant="outlined"
             {...register("password", { required: "จำเป็นต้องกรอกรหัสผ่าน" })}

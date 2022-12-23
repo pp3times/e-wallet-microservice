@@ -1,7 +1,22 @@
+import { getCookie } from "cookies-next";
 import { Layout, Nav, BottomNavigate } from "../components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 const Profile = () => {
   const [profile, setProfile] = useState({});
+
+  const fetchData = async () => {
+    try {
+        const data = await axios
+    } catch (error) {
+        consoel.log(error)
+    }
+  };
+
+  useEffect(() => {
+    setProfile(getCookie("user"));
+    console.log(profile);
+  }, []);
   return (
     <Layout title="โปร์ไฟล์">
       <Nav />
